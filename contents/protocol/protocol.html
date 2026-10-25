@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<!-- <html lang="zh-TW"> -->
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Protocol | Your Name</title>
+  <title>Publication | 賴俊傑 (JK)</title>
 
   <!-- Google Analytics 4 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
@@ -13,7 +13,6 @@
     gtag('js', new Date());
     gtag('config', 'G-XXXXXXXXXX');
   </script>
-
 
   <script>
     (function() {
@@ -30,7 +29,6 @@
       localStorage.setItem('theme', isLight ? 'light' : 'dark');
     }
   </script>
-
 
   <style>
     /* ========== 深色模式（預設）========== */
@@ -86,8 +84,8 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 60px;
-      border-bottom: 1px solid var(--border);
+      margin-bottom: 35px;
+      border-bottom: 2px solid var(--border);
       padding-bottom: 20px;
       flex-wrap: wrap;
       gap: 16px;
@@ -180,13 +178,28 @@
     a { color: var(--link); transition: color 0.2s; }
     a:hover { color: var(--link-hover); }
     ul { margin-left: 22px; margin-bottom: 14px; color: var(--text-muted); }
-    li { margin-bottom: 8px; }
+    ol { margin-left: 22px; margin-bottom: 14px; color: var(--text-muted); }
+    li { margin-bottom: 8px; color: var(--text-muted); transition: color 0.4s; }
     .muted { color: var(--text-dim); font-size: 0.9rem; }
     .divider {
       border: none;
       border-top: 1px solid var(--border);
       margin: 32px 0;
       transition: border-color 0.4s;
+    }
+
+    .back-to-top {
+      position: fixed;
+      right: 10px;
+      bottom: 24px;
+      z-index: 999;
+      padding: 11px 15px;
+      color: var(--text);
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      box-shadow: 0 6px 20px var(--shadow);
+      cursor: pointer;
     }
 
     /* ===== 卡片通用 ===== */
@@ -217,85 +230,64 @@
 </head>
 <body>
   <div class="container">
-
-  <nav>
-    <a href="index.html" class="logo">YOUR NAME</a>
-    <div class="nav-right">
-      <div class="nav-links">
-        <a href="index.html" >About</a>        <a href="research.html" >Research</a>        <a href="publication.html" >Publication</a>        <a href="software.html" >Software</a>        <a href="protocol.html" class="active">Protocol</a>        <a href="blog.html" >Blog</a>
+    <nav>
+      <a href="../../index.html" class="logo">賴俊傑 (Lai Joon Keat, JK)</a>
+      <div class="nav-right">
+        <div class="nav-links">
+          <a href="../about/about.html">About</a>
+          <!-- <a href="../research/research.html">Research</a> -->
+          <a href="../publication/publication.html">Publication</a>
+          <a href="../software/software.html">Software</a>
+          <a href="../protocol/protocol.html" class="active">Protocol</a>
+          <!-- <a href="../note/note.html">Note</a> -->
+        </div>
+        <button class="theme-toggle" onclick="toggleTheme()" title="明暗界面切換"><span>💡</span></button>
       </div>
-      <button class="theme-toggle" onclick="toggleTheme()" title="切換主題">
-        <span>🌙</span> <span>Light</span>
-      </button>
-    </div>
-  </nav>
+    </nav>
 
-
-    <h1>Protocol</h1>
-
-    <p style="font-size: 1.05rem; color: var(--text-muted); margin-bottom: 30px;">
-      以下為我在研究中使用的標準實驗流程、分析方法與可重複性指南。歡迎參考與引用。
-    </p>
+    <h1>✍️ 🔥 🔬</h1>
+    
+    <h2>落筆成記，薪火相傳，探索不止<br>Write. Preserve. Advance.</h2>
 
     <hr class="divider">
 
-    <h2>Experimental Protocols</h2>
+    <!-- 六個入口卡片 -->
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px;">
 
-    <div class="card">
-      <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px;">
-        <h3 style="margin: 0; font-size: 1.15rem;">🔬 Protocol Name One</h3>
-        <span class="muted">v1.0 · Updated 20XX</span>
-      </div>
-      <p style="margin: 10px 0 12px 0;">
-        描述這個實驗流程的用途、適用條件與關鍵步驟摘要。說明它適用於什麼類型的樣本或實驗設計。
-      </p>
-      <p style="margin: 0;">
-        <a href="#">[PDF Protocol]</a> &nbsp;|&nbsp;
-        <a href="#">[Data Sheet]</a> &nbsp;|&nbsp;
-        <a href="#">[GitHub Repo]</a>
-      </p>
+      <a href="#" style="text-decoration:none; background:var(--bg-card); border:1px solid var(--border); border-radius:12px; padding:32px 18px; text-align:center; transition:all 0.3s; box-shadow:0 2px 8px var(--shadow);"
+         onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 12px 32px var(--shadow-hover)'; this.style.borderColor='var(--border-hover)';"
+         onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px var(--shadow)'; this.style.borderColor='var(--border)';">
+        <div style="font-size:2rem; margin-bottom:10px;">🌱</div>
+        <h2 style="margin:0 0 4px 0; font-size:1.1rem; color:var(--accent);">Plant cultivation</h2>
+        <p style="margin:0; color:var(--text-dim); font-size:1.15rem;">植物培養</p>
+      </a>
+
+      <a href="#" style="text-decoration:none; background:var(--bg-card); border:1px solid var(--border); border-radius:12px; padding:32px 18px; text-align:center; transition:all 0.3s; box-shadow:0 2px 8px var(--shadow);"
+         onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 12px 32px var(--shadow-hover)'; this.style.borderColor='var(--border-hover)';"
+         onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px var(--shadow)'; this.style.borderColor='var(--border)';">
+        <div style="font-size:2rem; margin-bottom:10px;">🧪</div>
+        <h2 style="margin:0 0 4px 0; font-size:1.1rem; color:var(--accent);">Histochemical stain</h2>
+        <p style="margin:0; color:var(--text-dim); font-size:1.15rem;">組織免疫染色</p>
+      </a>
+
+      <a href="#" style="text-decoration:none; background:var(--bg-card); border:1px solid var(--border); border-radius:12px; padding:32px 18px; text-align:center; transition:all 0.3s; box-shadow:0 2px 8px var(--shadow);"
+         onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 12px 32px var(--shadow-hover)'; this.style.borderColor='var(--border-hover)';"
+         onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px var(--shadow)'; this.style.borderColor='var(--border)';">
+        <div style="font-size:2rem; margin-bottom:10px;">🧬</div>
+        <h2 style="margin:0 0 4px 0; font-size:1.1rem; color:var(--accent);">Molecular biology</h2>
+        <p style="margin:0; color:var(--text-dim); font-size:1.15rem;">分子生物</p>
+      </a>
+
+
     </div>
 
-    <div class="card">
-      <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px;">
-        <h3 style="margin: 0; font-size: 1.15rem;">🔬 Protocol Name Two</h3>
-        <span class="muted">v2.1 · Updated 20XX</span>
-      </div>
-      <p style="margin: 10px 0 12px 0;">
-        描述這個實驗流程的用途與關鍵步驟。
-      </p>
-      <p style="margin: 0;">
-        <a href="#">[PDF Protocol]</a> &nbsp;|&nbsp;
-        <a href="#">[Supplementary Materials]</a>
-      </p>
-    </div>
-
-    <h2>Analysis Pipelines</h2>
-
-    <div class="card">
-      <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px;">
-        <h3 style="margin: 0; font-size: 1.15rem;">📊 Analysis Pipeline One</h3>
-        <span class="muted">Snakemake · Docker</span>
-      </div>
-      <p style="margin: 10px 0 12px 0;">
-        描述這個分析流程的輸入資料、處理步驟與輸出結果。說明如何重現完整的分析。
-      </p>
-      <p style="margin: 0;">
-        <a href="#">[GitHub]</a> &nbsp;|&nbsp;
-        <a href="#">[Docker Hub]</a> &nbsp;|&nbsp;
-        <a href="#">[Documentation]</a>
-      </p>
-    </div>
-
-    <h2>Reproducibility Notes</h2>
-    <ul>
-      <li>所有實驗數據與分析腳本均存放於 <a href="#">[Zenodo / Figshare]</a>。</li>
-      <li>環境設定請參考 <code style="background:var(--bg-hover); padding:2px 6px; border-radius:4px; font-size:0.9em;">environment.yml</code> 或 Docker 映像檔。</li>
-      <li>如需原始資料，請 <a href="mailto:your.email@example.com">來信聯繫</a>。</li>
-    </ul>
+    <button class="back-to-top" type="button" aria-label="回到頁面頂部" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">
+      <span aria-hidden="true">↑</span>
+      <span>回到頂部</span>
+    </button>
 
     <footer>
-      <p>© 2026 Your Name. All rights reserved.</p>
+      <p>&copy; 2026 Lai Joon Keat. All rights reserved.</p>
     </footer>
   </div>
 </body>
