@@ -1,9 +1,10 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<!-- <html lang="zh-TW"> -->
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home | 賴俊傑</title>
+  <link rel="icon" type="image/ico" href="./assets/selfie_01.ico">
+  <title>Home | 賴俊傑 (JK)</title>
 
   <!-- Google Analytics 4 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
@@ -29,7 +30,6 @@
       localStorage.setItem('theme', isLight ? 'light' : 'dark');
     }
   </script>
-
 
   <style>
     /* ========== 深色模式（預設）========== */
@@ -68,8 +68,6 @@
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
       font-family: 'Georgia', 'Times New Roman', serif;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
       background: var(--bg);
       color: var(--text);
       line-height: 1.7;
@@ -95,7 +93,7 @@
     }
     .logo {
       font-size: 1.4rem;
-      font-weight: 500;
+      font-weight: 600;
       letter-spacing: 1px;
       color: var(--accent);
       text-decoration: none;
@@ -133,6 +131,7 @@
       cursor: pointer;
       color: var(--text-dim);
       font-size: 0.85rem;
+      font-family: inherit;
       transition: all 0.3s;
       display: flex;
       align-items: center;
@@ -156,7 +155,7 @@
     /* ===== 內文通用 ===== */
     h1 {
       font-size: 2.2rem;
-      font-weight: 500;
+      font-weight: 400;
       color: var(--accent);
       margin-bottom: 24px;
       letter-spacing: -0.3px;
@@ -180,13 +179,28 @@
     a { color: var(--link); transition: color 0.2s; }
     a:hover { color: var(--link-hover); }
     ul { margin-left: 22px; margin-bottom: 14px; color: var(--text-muted); }
-    li { margin-bottom: 8px; }
+    ol { margin-left: 22px; margin-bottom: 14px; color: var(--text-muted); }
+    li { margin-bottom: 8px; color: var(--text-muted); transition: color 0.4s; }
     .muted { color: var(--text-dim); font-size: 0.9rem; }
     .divider {
       border: none;
       border-top: 1px solid var(--border);
       margin: 32px 0;
       transition: border-color 0.4s;
+    }
+
+    .back-to-top {
+      position: fixed;
+      right: 10px;
+      bottom: 24px;
+      z-index: 999;
+      padding: 11px 15px;
+      color: var(--text);
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      box-shadow: 0 6px 20px var(--shadow);
+      cursor: pointer;
     }
 
     /* ===== 卡片通用 ===== */
@@ -217,21 +231,18 @@
 </head>
 <body>
   <div class="container">
-
-  <nav>
-    <a href="index.html" class="logo">賴俊傑，Lai Joon Keat (JK)</a>
-    <div class="nav-right">
-      <div class="nav-links">
-        <a href="./contents/about/about.html">About</a>
-        <!-- <a href="./contents/research/research.html" >Research</a> -->
-        <a href="./contents/publication/publication.html" >Publication</a>
-        <a href="./contents/software/software.html" >Software</a>
-        <a href="./contents/protocol/protocol.html" >Protocol</a>
-        <!-- <a href="./contents/note/note.html" >Note</a> -->
+    <nav>
+      <a href="../../index.html" class="logo">🏠</a>
+      <div class="nav-right">
+        <div class="nav-links">
+          <a href="./contents/about/about.html">About</a>
+          <a href="./contents/publication/publication.html">Publication</a>
+          <a href="./contents/software/software.html">Software</a>
+          <a href="./contents/protocol/protocol.html">Protocol</a>
+        </div>
+        <button class="theme-toggle" onclick="toggleTheme()" title="明暗界面切換"><span>💡</span></button>
       </div>
-      <button class="theme-toggle" onclick="toggleTheme()" title="明暗界面切換"><span>💡</span></button>
-    </div>
-  </nav>
+    </nav>
 
     <!-- 首頁 -->
     <div style="text-align: center; margin-bottom: 60px;">
