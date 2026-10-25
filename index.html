@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home | 賴俊傑</title>
+
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+
+  <script>
+    (function() {
+      const saved = localStorage.getItem('theme');
+      if (saved === 'light') {
+        document.documentElement.classList.add('light');
+      } else {
+        document.documentElement.classList.remove('light');
+      }
+    })();
+    function toggleTheme() {
+      const html = document.documentElement;
+      const isLight = html.classList.toggle('light');
+      localStorage.setItem('theme', isLight ? 'light' : 'dark');
+    }
+  </script>
+
+
+  <style>
+    /* ========== 深色模式（預設）========== */
+    :root {
+      --bg: #0f0f12;
+      --bg-card: #1a1a1f;
+      --bg-hover: #22222a;
+      --text: #e0e0e5;
+      --text-muted: #888899;
+      --text-dim: #666677;
+      --border: #2a2a35;
+      --border-hover: #3a3a4a;
+      --accent: #c0c0d0;
+      --link: #a0a0b8;
+      --link-hover: #e0e0f0;
+      --shadow: rgba(0,0,0,0.4);
+      --shadow-hover: rgba(0,0,0,0.6);
+    }
+    /* ========== 淺色模式 ========== */
+    :root.light {
+      --bg: #fafafa;
+      --bg-card: #ffffff;
+      --bg-hover: #f5f5f7;
+      --text: #2c2c2c;
+      --text-muted: #888899;
+      --text-dim: #9999aa;
+      --border: #e0e0e8;
+      --border-hover: #c8c8d8;
+      --accent: #1a1a2e;
+      --link: #555566;
+      --link-hover: #1a1a2e;
+      --shadow: rgba(0,0,0,0.06);
+      --shadow-hover: rgba(0,0,0,0.12);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Georgia', 'Times New Roman', serif;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      min-height: 100vh;
+      transition: background 0.4s, color 0.4s;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 24px;
+    }
+
+    /* ===== 導航欄 ===== */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 60px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 20px;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .logo {
+      font-size: 1.4rem;
+      font-weight: 500;
+      letter-spacing: 1px;
+      color: var(--accent);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    .logo:hover { color: var(--link-hover); }
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+    .nav-links {
+      display: flex;
+      gap: 22px;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text-dim);
+      font-size: 0.88rem;
+      letter-spacing: 0.4px;
+      transition: color 0.3s;
+      white-space: nowrap;
+    }
+    .nav-links a:hover, .nav-links a.active {
+      color: var(--text);
+    }
+
+    /* ===== 主題切換按鈕 ===== */
+    .theme-toggle {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 6px 14px;
+      cursor: pointer;
+      color: var(--text-dim);
+      font-size: 0.85rem;
+      transition: all 0.3s;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .theme-toggle:hover {
+      border-color: var(--border-hover);
+      color: var(--text);
+    }
+
+    /* ===== 頁尾 ===== */
+    footer {
+      text-align: center;
+      margin-top: 80px;
+      padding-top: 30px;
+      border-top: 1px solid var(--border);
+      color: var(--text-dim);
+      font-size: 0.8rem;
+    }
+
+    /* ===== 內文通用 ===== */
+    h1 {
+      font-size: 2.2rem;
+      font-weight: 500;
+      color: var(--accent);
+      margin-bottom: 24px;
+      letter-spacing: -0.3px;
+      transition: color 0.4s;
+    }
+    h2 {
+      font-size: 1.3rem;
+      font-weight: 500;
+      color: var(--accent);
+      margin: 36px 0 14px 0;
+      letter-spacing: 0.3px;
+      transition: color 0.4s;
+    }
+    h3 {
+      font-size: 1.05rem;
+      font-weight: 500;
+      color: var(--text);
+      margin: 22px 0 8px 0;
+    }
+    p { margin-bottom: 14px; color: var(--text-muted); transition: color 0.4s; }
+    a { color: var(--link); transition: color 0.2s; }
+    a:hover { color: var(--link-hover); }
+    ul { margin-left: 22px; margin-bottom: 14px; color: var(--text-muted); }
+    li { margin-bottom: 8px; }
+    .muted { color: var(--text-dim); font-size: 0.9rem; }
+    .divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 32px 0;
+      transition: border-color 0.4s;
+    }
+
+    /* ===== 卡片通用 ===== */
+    .card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 28px;
+      margin-bottom: 18px;
+      transition: all 0.3s;
+    }
+    .card:hover {
+      border-color: var(--border-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px var(--shadow-hover);
+    }
+
+    /* ===== 響應式 ===== */
+    @media (max-width: 640px) {
+      .container { padding: 24px 16px; }
+      nav { flex-direction: column; align-items: flex-start; }
+      .nav-right { width: 100%; justify-content: space-between; }
+      .nav-links { gap: 14px; }
+      h1 { font-size: 1.7rem; }
+    }
+  </style>
+
+</head>
+<body>
+  <div class="container">
+
+  <nav>
+    <a href="index.html" class="logo">賴俊傑，Lai Joon Keat (JK)</a>
+    <div class="nav-right">
+      <div class="nav-links">
+        <a href="./contents/about/about.html">About</a>
+        <!-- <a href="./contents/research/research.html" >Research</a> -->
+        <a href="./contents/publication/publication.html" >Publication</a>
+        <a href="./contents/software/software.html" >Software</a>
+        <a href="./contents/protocol/protocol.html" >Protocol</a>
+        <!-- <a href="./contents/note/note.html" >Note</a> -->
+      </div>
+      <button class="theme-toggle" onclick="toggleTheme()" title="明暗界面切換"><span>💡</span></button>
+    </div>
+  </nav>
+
+    <!-- 首頁 -->
+    <div style="text-align: center; margin-bottom: 60px;">
+      <h1 style="font-size: 2.5rem; margin-bottom: 12px;">Hi 👋 I'm JK</h1>
+      <p style="color: var(--text-dim); max-width: 480px; margin: 0 auto; font-size: 1.05rem;">
+        Agronomist, Data analyst
+      </p>
+    </div>
+
+    <!-- 六個入口卡片 -->
+    <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px;">
+
+      <a href="./contents/about/about.html" style="text-decoration:none; background:var(--bg-card); border:1px solid var(--border); border-radius:12px; padding:32px 18px; text-align:center; transition:all 0.3s; box-shadow:0 2px 8px var(--shadow);"
+         onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 12px 32px var(--shadow-hover)'; this.style.borderColor='var(--border-hover)';"
+         onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px var(--shadow)'; this.style.borderColor='var(--border)';">
+        <div style="font-size:2rem; margin-bottom:10px;">👤</div>
+        <h2 style="margin:0 0 4px 0; font-size:1.1rem; color:var(--accent);">About</h2>
+        <p style="margin:0; color:var(--text-dim); font-size:0.82rem;">個人簡介、學經歷</p>
+      </a>
+
+      <!-- <a href="./contents/research/research.html" style="text-decoration:none; background:var(--bg-card); border:1px solid var(--border); border-radius:12px; padding:32px 18px; text-align:center; transition:all 0.3s; box-shadow:0 2px 8px var(--shadow);"
+         onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 12px 32px var(--shadow-hover)'; this.style.borderColor='var(--border-hover)';"
+         onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px var(--shadow)'; this.style.borderColor='var(--border)';">
+        <div style="font-size:2rem; margin-bottom:10px;">🔬</div>
+        <h2 style="margin:0 0 4px 0; font-size:1.1rem; color:var(--accent);">Research</h2>
+        <p style="margin:0; color:var(--text-dim); font-size:0.82rem;">研究想法、進程</p>
+      </a> -->
+
+      <a href="./contents/publication/publication.html" style="text-decoration:none; background:var(--bg-card); border:1px solid var(--border); border-radius:12px; padding:32px 18px; text-align:center; transition:all 0.3s; box-shadow:0 2px 8px var(--shadow);"
+         onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 12px 32px var(--shadow-hover)'; this.style.borderColor='var(--border-hover)';"
+         onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px var(--shadow)'; this.style.borderColor='var(--border)';">
+        <div style="font-size:2rem; margin-bottom:10px;">📄</div>
+        <h2 style="margin:0 0 4px 0; font-size:1.1rem; color:var(--accent);">Publication</h2>
+        <p style="margin:0; color:var(--text-dim); font-size:0.82rem;">期刊論文、會議發表</p>
+      </a>
+
+      <a href="./contents/software/software.html" style="text-decoration:none; background:var(--bg-card); border:1px solid var(--border); border-radius:12px; padding:32px 18px; text-align:center; transition:all 0.3s; box-shadow:0 2px 8px var(--shadow);"
+         onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 12px 32px var(--shadow-hover)'; this.style.borderColor='var(--border-hover)';"
+         onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px var(--shadow)'; this.style.borderColor='var(--border)';">
+        <div style="font-size:2rem; margin-bottom:10px;">💻</div>
+        <h2 style="margin:0 0 4px 0; font-size:1.1rem; color:var(--accent);">Software</h2>
+        <p style="margin:0; color:var(--text-dim); font-size:0.82rem;">開發工具、開源專案</p>
+      </a>
+
+      <a href="./contents/protocol/protocol.html" style="text-decoration:none; background:var(--bg-card); border:1px solid var(--border); border-radius:12px; padding:32px 18px; text-align:center; transition:all 0.3s; box-shadow:0 2px 8px var(--shadow);"
+         onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 12px 32px var(--shadow-hover)'; this.style.borderColor='var(--border-hover)';"
+         onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px var(--shadow)'; this.style.borderColor='var(--border)';">
+        <div style="font-size:2rem; margin-bottom:10px;">📋</div>
+        <h2 style="margin:0 0 4px 0; font-size:1.1rem; color:var(--accent);">Protocol</h2>
+        <p style="margin:0; color:var(--text-dim); font-size:0.82rem;">實驗流程、標準作業程序</p>
+      </a>
+
+      <!-- <a href="./contents/note/note.html" style="text-decoration:none; background:var(--bg-card); border:1px solid var(--border); border-radius:12px; padding:32px 18px; text-align:center; transition:all 0.3s; box-shadow:0 2px 8px var(--shadow);"
+         onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 12px 32px var(--shadow-hover)'; this.style.borderColor='var(--border-hover)';"
+         onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px var(--shadow)'; this.style.borderColor='var(--border)';">
+        <div style="font-size:2rem; margin-bottom:10px;">✍️</div>
+        <h2 style="margin:0 0 4px 0; font-size:1.1rem; color:var(--accent);">Note</h2>
+        <p style="margin:0; color:var(--text-dim); font-size:0.82rem;">隨筆、雜項</p>
+      </a> -->
+
+    </div>
+
+    <footer>
+      <p>&copy; 2026 Lai Joon Keat. All rights reserved.</p>
+    </footer>
+  </div>
+</body>
+</html>

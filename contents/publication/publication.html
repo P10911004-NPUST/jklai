@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<!-- <html lang="zh-TW"> -->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Publication | 賴俊傑 (JK)</title>
+
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+
+  <script>
+    (function() {
+      const saved = localStorage.getItem('theme');
+      if (saved === 'light') {
+        document.documentElement.classList.add('light');
+      } else {
+        document.documentElement.classList.remove('light');
+      }
+    })();
+    function toggleTheme() {
+      const html = document.documentElement;
+      const isLight = html.classList.toggle('light');
+      localStorage.setItem('theme', isLight ? 'light' : 'dark');
+    }
+  </script>
+
+  <style>
+    /* ========== 深色模式（預設）========== */
+    :root {
+      --bg: #0f0f12;
+      --bg-card: #1a1a1f;
+      --bg-hover: #22222a;
+      --text: #e0e0e5;
+      --text-muted: #888899;
+      --text-dim: #666677;
+      --border: #2a2a35;
+      --border-hover: #3a3a4a;
+      --accent: #c0c0d0;
+      --link: #a0a0b8;
+      --link-hover: #e0e0f0;
+      --shadow: rgba(0,0,0,0.4);
+      --shadow-hover: rgba(0,0,0,0.6);
+    }
+    /* ========== 淺色模式 ========== */
+    :root.light {
+      --bg: #fafafa;
+      --bg-card: #ffffff;
+      --bg-hover: #f5f5f7;
+      --text: #2c2c2c;
+      --text-muted: #888899;
+      --text-dim: #9999aa;
+      --border: #e0e0e8;
+      --border-hover: #c8c8d8;
+      --accent: #1a1a2e;
+      --link: #555566;
+      --link-hover: #1a1a2e;
+      --shadow: rgba(0,0,0,0.06);
+      --shadow-hover: rgba(0,0,0,0.12);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Georgia', 'Times New Roman', serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      min-height: 100vh;
+      transition: background 0.4s, color 0.4s;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 24px;
+    }
+
+    /* ===== 導航欄 ===== */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 60px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 20px;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .logo {
+      font-size: 1.4rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      color: var(--accent);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    .logo:hover { color: var(--link-hover); }
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+    .nav-links {
+      display: flex;
+      gap: 22px;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text-dim);
+      font-size: 0.88rem;
+      letter-spacing: 0.4px;
+      transition: color 0.3s;
+      white-space: nowrap;
+    }
+    .nav-links a:hover, .nav-links a.active {
+      color: var(--text);
+    }
+
+    /* ===== 主題切換按鈕 ===== */
+    .theme-toggle {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 6px 14px;
+      cursor: pointer;
+      color: var(--text-dim);
+      font-size: 0.85rem;
+      font-family: inherit;
+      transition: all 0.3s;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .theme-toggle:hover {
+      border-color: var(--border-hover);
+      color: var(--text);
+    }
+
+    /* ===== 頁尾 ===== */
+    footer {
+      text-align: center;
+      margin-top: 80px;
+      padding-top: 30px;
+      border-top: 1px solid var(--border);
+      color: var(--text-dim);
+      font-size: 0.8rem;
+    }
+
+    /* ===== 內文通用 ===== */
+    h1 {
+      font-size: 2.2rem;
+      font-weight: 400;
+      color: var(--accent);
+      margin-bottom: 24px;
+      letter-spacing: -0.3px;
+      transition: color 0.4s;
+    }
+    h2 {
+      font-size: 1.3rem;
+      font-weight: 500;
+      color: var(--accent);
+      margin: 36px 0 14px 0;
+      letter-spacing: 0.3px;
+      transition: color 0.4s;
+    }
+    h3 {
+      font-size: 1.05rem;
+      font-weight: 500;
+      color: var(--text);
+      margin: 22px 0 8px 0;
+    }
+    p { margin-bottom: 14px; color: var(--text-muted); transition: color 0.4s; }
+    a { color: var(--link); transition: color 0.2s; }
+    a:hover { color: var(--link-hover); }
+    ul { margin-left: 22px; margin-bottom: 14px; color: var(--text-muted); }
+    ol { margin-left: 22px; margin-bottom: 14px; color: var(--text-muted); }
+    li { margin-bottom: 8px; color: var(--text-muted); transition: color 0.4s; }
+    .muted { color: var(--text-dim); font-size: 0.9rem; }
+    .divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 32px 0;
+      transition: border-color 0.4s;
+    }
+
+    .back-to-top {
+      position: fixed;
+      right: 10px;
+      bottom: 24px;
+      z-index: 999;
+      padding: 11px 15px;
+      color: var(--text);
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      box-shadow: 0 6px 20px var(--shadow);
+      cursor: pointer;
+    }
+
+    /* ===== 卡片通用 ===== */
+    .card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 28px;
+      margin-bottom: 18px;
+      transition: all 0.3s;
+    }
+    .card:hover {
+      border-color: var(--border-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px var(--shadow-hover);
+    }
+
+    /* ===== 響應式 ===== */
+    @media (max-width: 640px) {
+      .container { padding: 24px 16px; }
+      nav { flex-direction: column; align-items: flex-start; }
+      .nav-right { width: 100%; justify-content: space-between; }
+      .nav-links { gap: 14px; }
+      h1 { font-size: 1.7rem; }
+    }
+  </style>
+
+</head>
+<body>
+  <div class="container">
+    <nav>
+      <a href="../../index.html" class="logo">賴俊傑 (Lai Joon Keat, JK)</a>
+      <div class="nav-right">
+        <div class="nav-links">
+          <a href="../about/about.html">About</a>
+          <!-- <a href="../research/research.html">Research</a> -->
+          <a href="../publication/publication.html" class="active">Publication</a>
+          <a href="../software/software.html">Software</a>
+          <a href="../protocol/protocol.html">Protocol</a>
+          <!-- <a href="../note/note.html">Note</a> -->
+        </div>
+        <button class="theme-toggle" onclick="toggleTheme()" title="明暗界面切換"><span>💡</span></button>
+      </div>
+    </nav>
+
+    <h1>No 👣,  No 🚀</h1>
+    
+    <h2>不積跬步, 何以至千里</h2>
+    
+
+    <hr class="divider">
+
+    <h1>Journal</h1>
+    
+    <ol>
+      <li style='text-align: justify;'>
+        <a><u>Lai J.K.</u></a>, Jhang J.N., Yen H.C., Cho H.Y., Hsiao Y.C., Balasubramaniam H., Tseng C.S., Yamada M. (2026). 
+        <b>Conserved RGF1 peptide signaling regulates root meristem development through ROS in Arabidopsis and rice</b>.
+        <i>Journal of Experimental Botany</i>, erag498.
+        <a href="https://doi.org/10.1093/jxb/erag498">[DOI]</a>
+        <a href="./journal/pdf/JXB_2026.pdf">[PDF]</a>
+      </li>
+
+      <li style='text-align: justify;'>
+        Hsiao Y.C., <a><u>Lai J.K.</u></a>, Shiue S.Y., Yamada M. (2026). 
+        <b>RGF signaling bridges root development and nonlethal thermal stress adaptation</b>.
+        <i>New Phytologist</i>, 251(5):2656-2671.
+        <a href="https://doi.org/10.1111/nph.71392">[DOI]</a>
+        <a href="./journal/pdf/NewPhyto_2026.pdf">[PDF]</a>
+      </li>
+
+      <li style='text-align: justify;'>
+        Hsiao Y.C., Shiue S.Y., Yen M.R., <a><u>Lai J.K.</u></a>, Yamada M. (2025). 
+        <b>The peptide hormone RGF1 modulates PLETHORA2 stability via reactive oxygen species-dependent regulation of a cysteine residue</b>.
+        <i>Plant Physiology</i>, 198(3):kiaf244.
+        <a href="https://doi.org/10.1093/plphys/kiaf244">[DOI]</a>
+        <a href="./journal/pdf/PP_2025.pdf">[PDF]</a>
+      </li>
+
+      <li style='text-align: justify;'>
+        <a><u>Lai J.K.</u></a>, Lin W.S. (2021). 
+        <b>Real-Time Detection of Rice Growth Phase Transition for Panicle Nitrogen Application Timing Assessment</b>.
+        <i>Agronomy</i>, 11(12):2465.
+        <a href="https://doi.org/10.3390/agronomy11122465">[DOI]</a>
+        <a href="./journal/pdf/Agronomy_2021.pdf">[PDF]</a>
+      </li>
+
+      <li style='text-align: justify;'>
+        <a><u>Lai J.K.</u></a>, Lin W.S. (2021). 
+        <b>Assessment of the Rice Panicle Initiation by Using NDVI-Based Vegetation Indexes</b>.
+        <i>Applied Sciences</i>, 11(21):10076.
+        <a href="https://doi.org/10.3390/app112110076">[DOI]</a>
+        <a href="./journal/pdf/AppSci_2021.pdf">[PDF]</a>
+      </li>
+    </ol>
+
+    <hr class="divider">
+
+    <h1>Conference</h1>
+
+    <ol>
+      <li style='text-align: justify;'>
+        Hsiao Y.C., <a><u>Lai J.K.</u></a>, Yamada M. (2026). 
+        <b>RGF signaling coordinates redox homeostasis and root meristem development under non-lethal heat stress</b>.
+        <i>35<sup>th</sup> Plant Science &times; Sustainability: Cultivating Our Future</i>. 
+        Taiwan Society of Plant Biologists (TSPB), Taiwan.
+        <a href="./conference/pdf/TSPB_2026.pdf">[PDF]</a>
+      </li>
+
+      <li style='text-align: justify;'>
+        <a><u>Lai J.K.</u></a>, Balasubramaniam H., Jhang J.N., Hsiao Y.C., Cho H.Y., Yamada M. (2025). 
+        <b>Characterization of <i>OsRGF1</i> gene function in the root of <i>Oryza sativa</i></b>.
+        <i>26<sup>th</sup> ABRC Poster Day 2025</i>. Agricultural Biotechnology Research Center (ABRC) of Academia Sinica, Taiwan.
+        <a href="./conference/pdf/ABRC_2025.pdf">[PDF]</a>
+      </li>
+
+      <li style='text-align: justify;'>
+        李欣曄, <a><u>賴俊傑</u></a>, 林汶鑫. (2022). 
+        <b>利用LCC校正智慧型手機RGB影像探測水稻葉片氮含量之研究</b>.
+        <i>台灣農藝學會 (111年度)</i>: 作物科學講座暨研究成果發表會.
+        <a href="./conference/pdf/TAS_111-5.pdf">[PDF]</a>
+      </li>
+
+      <li style='text-align: justify;'>
+        呂椿棠, <a><u>賴俊傑</u></a>, 楊滿霞, 賴明信, 林汶鑫. (2022). 
+        <b>利用水稻植冠面積相關指數評估物侯模式之探討</b>.
+        <i>台灣農藝學會 (111年度)</i>: 作物科學講座暨研究成果發表會.
+        <a href="./conference/pdf/TAS_111-4.pdf">[PDF]</a>
+      </li>
+
+      <li style='text-align: justify;'>
+        蔡欣潔, <a><u>賴俊傑</u></a>, 林汶鑫. (2022). 
+        <b>透過空拍影像點雲生成技術於水稻株高繪測之探討</b>.
+        <i>台灣農藝學會 (111年度)</i>: 作物科學講座暨研究成果發表會.
+        <a href="./conference/pdf/TAS_111-3.pdf">[PDF]</a>
+      </li>
+
+      <li style='text-align: justify;'>
+        <a><u>賴俊傑</u></a>, 陳泰元, 林汶鑫. (2022). 
+        <b>利用電腦視覺進行小番茄葉片病害辨識之探討</b>.
+        <i>台灣農藝學會 (111年度)</i>: 作物科學講座暨研究成果發表會.
+        <a href="./conference/pdf/TAS_111-2.pdf">[PDF]</a>
+      </li>
+
+      <li style='text-align: justify;'>
+        黃貞瑋, <a><u>賴俊傑</u></a>, 潘韋如, 蔡尚翰, 林汶鑫. (2022). 
+        <b>利用番茄葉片光譜反射量預測小果番茄品質之研究</b>.
+        <i>台灣農藝學會 (111年度)</i>: 作物科學講座暨研究成果發表會.
+        <a href="./conference/pdf/TAS_111-1.pdf">[PDF]</a>
+      </li>
+
+      <li style='text-align: justify;'>
+        <a><a><u>賴俊傑</u></a></a>, 盤境期, 林汶鑫, 林素汝. (2021).
+        <b>利用無人機進行台灣黎株高之高通量表現型繪測</b>.
+        <i>台灣農藝學會 (110年度)</i>: 作物科學講座暨研究成果發表會.
+        <a href="./conference/pdf/TAS_110-1.pdf">[PDF]</a>
+      </li>
+
+      <li style='text-align: justify;'>
+        蔡欣潔, 陳俊諺, <a><a><u>賴俊傑</u></a></a>, 林汶鑫. (2020).
+        <b>利用無人機進行水稻株高繪測之研究</b>.
+        <i>台灣農藝學會 (109年度)</i>: 作物科學講座暨研究成果發表會.
+        <a href="./conference/pdf/TAS_109-2.pdf">[PDF]</a>
+      </li>
+
+      <li style='text-align: justify;'>
+        楊崧淯, <a><a><u>賴俊傑</u></a></a>, 胡智傑, 林汶鑫. (2020).
+        <b>利用無人機正射影像建立稻熱病監測指標之研究</b>.
+        <i>台灣農藝學會 (109年度)</i>: 作物科學講座暨研究成果發表會.
+        <a href="./conference/pdf/TAS_109-1.pdf">[PDF]</a>
+      </li>
+
+      <li style='text-align: justify;'>
+        <a><u>Lai J.K.</u></a>, Lin W.S. (2019).
+        <b>Assessment of the date of panicle initiation for the rice (<i>Oryza sativa</i> L.) using normalized difference vegetation index (NDVI) trends</b>.
+        <i>台灣農藝學會 (108年度)</i>: 作物科學講座暨研究成果發表會.
+        <a href="./conference/pdf/TAS_108.pdf">[PDF]</a>
+      </li>
+
+      <li style='text-align: justify;'>
+        <a><u>Lai J.K.</u></a>, Lin K.H., Zuo J.Q., Jou Y.T., Wang Y.M., Lin W.S. (2019). 
+        <b>A pilot study on using probiotics to reduce the application rate of nitrogen fertilizer based on alternate wetting and drying (AWD) irrigation</b>.
+        Development for Water, Food and Nutrition Security in a Competitive Environment. W.1.2.18.
+        <i>70<sup>th</sup> International Executive Council Meeting & 3<sup>rd</sup> World Irrigation Forum</i>, Bali, Indonesia.
+        <a href="https://www.icid.org/wif3_papers_content.html">[ISBN: 978-81-89610-27-2]</a>
+        <a href="./conference/pdf/WIF3_2019.pdf">[PDF]</a>
+      </li>
+    </ol>
+
+    <hr class="divider">
+
+    <h1>Software</h1>
+
+    <ol>
+      <li style='text-align: justify;'>
+        <a><u>Lai J.K.</u></a> (2026).
+        <b>oneway: One-Way Statistical Analyses</b>.
+        <i>The Comprehensive R Archive Network (CRAN)</i>. R package version 0.0.3.
+        <a href="https://doi.org/10.32614/cran.package.oneway">[DOI]</a>
+        <a href="https://p10911004-npust.github.io/oneway">[Webpage]</a>
+        <a href="https://cran.r-project.org/web/packages/oneway/oneway.pdf">[PDF]</a>
+      </li>
+
+      <li style='text-align: justify;'>
+        <a><u>Lai J.K.</u></a> (2026).
+        <b>varequal: Tests and Measures for Homoscedasticity</b>.
+        <i>The Comprehensive R Archive Network (CRAN)</i>. R package version 0.0.2.
+        <a href="https://doi.org/10.32614/cran.package.varequal">[DOI]</a>
+        <a href="https://p10911004-npust.github.io/varequal">[Webpage]</a>
+        <a href="https://cran.r-project.org/web/packages/varequal/varequal.pdf">[PDF]</a>
+      </li>
+
+      <li style='text-align: justify;'>
+        <a><u>Lai J.K.</u></a> (2026).
+        <b>normality: Tests for Departure from Normality</b>.
+        <i>The Comprehensive R Archive Network (CRAN)</i>. R package version 0.0.4.
+        <a href="https://doi.org/10.32614/CRAN.package.normality">[DOI]</a>
+        <a href="https://p10911004-npust.github.io/normality">[Webpage]</a>
+        <a href="https://cran.r-project.org/web/packages/normality/normality.pdf">[PDF]</a>
+      </li>
+
+      <li style='text-align: justify;'>
+        <a><u>Lai J.K.</u></a> (2026).
+        <b>venny: Venn Diagram</b>.
+        <i>The Comprehensive R Archive Network (CRAN)</i>. R package version 0.0.4.
+        <a href="https://doi.org/10.32614/CRAN.package.venny">[DOI]</a>
+        <a href="https://p10911004-npust.github.io/venny">[Webpage]</a>
+        <a href="https://cran.r-project.org/web/packages/venny/venny.pdf">[PDF]</a>
+      </li>
+
+      <li style='text-align: justify;'>
+        <a><u>Lai J.K.</u></a> (2026).
+        <b>outlying: Outliers Detection</b>.
+        <i>The Comprehensive R Archive Network (CRAN)</i>. R package version 0.0.1.
+        <a href="https://doi.org/10.32614/CRAN.package.outlying">[DOI]</a>
+        <a href="https://cran.r-project.org/web/packages/outlying/outlying.pdf">[PDF]</a>
+      </li>
+    </ol>
+
+    <hr class="divider">
+
+    <h1>Patent</h1>
+
+    <ol>
+      <li>
+        Lin W.S., <a><u>Lai J.K.</u></a> (2023).
+        Rice panicle initiation stage estimation method and system thereof (Taiwan Patent No. I815111)</b>.
+        <i>Taiwan Intellectual Property Office.</i>
+        <a href="https://tiponet.tipo.gov.tw/gpss2/gpsskmc/gpssbkm?$$GPS!!NO26D06C6470070606C082A8">[URL]</a>
+        <a href="./patent/Rice_PI_detect_I815111.pdf">[PDF]</a>
+      </li>
+    </ol>
+
+    <hr class="divider">
+
+    <h1>PhD Dissertation</h1>
+
+    <p style='text-align: justify;'>
+      Lai J.K. (2023).<br> 
+      中文標題：<b>水稻生長相轉換之高通量表現型鑑定技術研究</b>.<br>
+      English Title: High-Throughput Phenotyping of Rice Growth Phase Transition<br>
+      <a href="http://doi.org/10.6346/NPUST202300261">[DOI]</a>
+      <a href="./dissertation/pdf/NPUST_PhD-dissertation_2023.pdf">[PDF]</a>
+    </p>
+
+    <hr class="divider">
+
+    ORCID: <a href="https://orcid.org/0000-0002-9840-5836">https://orcid.org/0000-0002-9840-5836</a>
+
+    <button class="back-to-top" type="button" aria-label="回到頁面頂部" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">
+      <span aria-hidden="true">↑</span>
+      <span>回到頂部</span>
+    </button>
+
+    <footer>
+      <p>&copy; 2026 Lai Joon Keat. All rights reserved.</p>
+    </footer>
+  </div>
+</body>
+</html>
