@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Software | Your Name</title>
+  <title>Software | 賴俊傑 (JK)</title>
 
   <!-- Google Analytics 4 -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
@@ -13,7 +13,6 @@
     gtag('js', new Date());
     gtag('config', 'G-XXXXXXXXXX');
   </script>
-
 
   <script>
     (function() {
@@ -30,7 +29,6 @@
       localStorage.setItem('theme', isLight ? 'light' : 'dark');
     }
   </script>
-
 
   <style>
     /* ========== 深色模式（預設）========== */
@@ -86,8 +84,8 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-bottom: 60px;
-      border-bottom: 1px solid var(--border);
+      margin-bottom: 35px;
+      border-bottom: 2px solid var(--border);
       padding-bottom: 20px;
       flex-wrap: wrap;
       gap: 16px;
@@ -189,12 +187,26 @@
       transition: border-color 0.4s;
     }
 
+    .back-to-top {
+      position: fixed;
+      right: 10px;
+      bottom: 24px;
+      z-index: 999;
+      padding: 11px 15px;
+      color: var(--text);
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      box-shadow: 0 6px 20px var(--shadow);
+      cursor: pointer;
+    }
+
     /* ===== 卡片通用 ===== */
     .card {
       background: var(--bg-card);
       border: 1px solid var(--border);
       border-radius: 12px;
-      padding: 28px;
+      padding: 12px;
       margin-bottom: 18px;
       transition: all 0.3s;
     }
@@ -217,80 +229,124 @@
 </head>
 <body>
   <div class="container">
-
-  <nav>
-    <a href="index.html" class="logo">YOUR NAME</a>
-    <div class="nav-right">
-      <div class="nav-links">
-        <a href="index.html" >About</a>        <a href="research.html" >Research</a>        <a href="publication.html" >Publication</a>        <a href="software.html" class="active">Software</a>        <a href="protocol.html" >Protocol</a>        <a href="blog.html" >Blog</a>
+    <nav>
+      <a href="../../index.html" class="logo">賴俊傑 (Lai Joon Keat, JK)</a>
+      <div class="nav-right">
+        <div class="nav-links">
+          <a href="../about/about.html">About</a>
+          <!-- <a href="../research/research.html">Research</a> -->
+          <a href="../publication/publication.html">Publication</a>
+          <a href="../software/software.html" class="active">Software</a>
+          <a href="../protocol/protocol.html">Protocol</a>
+          <!-- <a href="../note/note.html">Note</a> -->
+        </div>
+        <button class="theme-toggle" onclick="toggleTheme()" title="明暗界面切換"><span>💡</span></button>
       </div>
-      <button class="theme-toggle" onclick="toggleTheme()" title="切換主題">
-        <span>🌙</span> <span>Light</span>
-      </button>
-    </div>
-  </nav>
+    </nav>
 
-
-    <h1>Software</h1>
-
-    <p style="font-size: 1.05rem; color: var(--text-muted); margin-bottom: 30px;">
-      我開發並維護以下開源軟體與工具。所有專案均可在 <a href="https://github.com/yourname" target="_blank">GitHub</a> 上找到。
-    </p>
+    <h1 style="margin-top: 10px;">👄❎, 📝✅</h1>
+    
+    <h2>空言易耳，示我實行</h2>
 
     <hr class="divider">
 
+    <!-- oneway -->
     <div class="card">
       <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px;">
-        <h3 style="margin: 0; font-size: 1.15rem;">📦 Project Name One</h3>
-        <span class="muted">Python · MIT License</span>
+        <h2 style="margin: 0; font-size: 1.15rem;">
+          <img src="./img/Rlogo.svg" alt="R" style="height: 1em; width: auto; vertical-align: -0.15em;">
+          &nbsp;&nbsp;
+          <b>oneway</b>
+        </h2>
+        <span class="muted">R · MIT License</span>
       </div>
-      <p style="margin: 10px 0 12px 0;">
-        簡短描述這個軟體的功能、用途與特色。說明它解決了什麼問題，以及主要的使用場景。
-      </p>
+      <p style="text-align: justify; margin: 10px 0 12px 0;">One-Way Statistical Analyses</p>
       <p style="margin: 0;">
-        <a href="#">GitHub</a> &nbsp;|&nbsp;
-        <a href="#">Documentation</a> &nbsp;|&nbsp;
-        <a href="#">PyPI</a>
+        <a href="	https://github.com/P10911004-NPUST/oneway">GitHub</a> &nbsp;|&nbsp;
+        <a href="https://cran.r-project.org/package=oneway">CRAN</a> &nbsp;|&nbsp;
+        <a href="https://p10911004-npust.github.io/oneway/articles/oneway.html">Quick Start</a>
       </p>
     </div>
 
+    <!-- varequal -->
     <div class="card">
       <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px;">
-        <h3 style="margin: 0; font-size: 1.15rem;">📦 Project Name Two</h3>
-        <span class="muted">R · GPL-3</span>
+        <h2 style="margin: 0; font-size: 1.15rem;">
+          <img src="./img/Rlogo.svg" alt="R" style="height: 1em; width: auto; vertical-align: -0.15em;">
+          &nbsp;&nbsp;
+          <b>varequal</b>
+        </h2>
+        <span class="muted">R · MIT License</span>
       </div>
-      <p style="margin: 10px 0 12px 0;">
-        簡短描述這個軟體的功能、用途與特色。
-      </p>
+      <p style="text-align: justify; margin: 10px 0 12px 0;">Tests and Measures for Homoscedasticity</p>
       <p style="margin: 0;">
-        <a href="#">GitHub</a> &nbsp;|&nbsp;
-        <a href="#">CRAN</a>
+        <a href="	https://github.com/P10911004-NPUST/varequal">GitHub</a> &nbsp;|&nbsp;
+        <a href="https://cran.r-project.org/package=varequal">CRAN</a> &nbsp;|&nbsp;
+        <a href="https://p10911004-npust.github.io/varequal/articles/varequal.html">Quick Start</a>
       </p>
     </div>
 
+    <!-- normality -->
     <div class="card">
       <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px;">
-        <h3 style="margin: 0; font-size: 1.15rem;">📦 Project Name Three</h3>
-        <span class="muted">JavaScript · Apache-2.0</span>
+        <h2 style="margin: 0; font-size: 1.15rem;">
+          <img src="./img/Rlogo.svg" alt="R" style="height: 1em; width: auto; vertical-align: -0.15em;">
+          &nbsp;&nbsp;
+          <b>normality</b>
+        </h2>
+        <span class="muted">R · MIT License</span>
       </div>
-      <p style="margin: 10px 0 12px 0;">
-        簡短描述這個軟體的功能、用途與特色。
-      </p>
+      <p style="text-align: justify; margin: 10px 0 12px 0;">Tests for Departure from Normality</p>
       <p style="margin: 0;">
-        <a href="#">GitHub</a> &nbsp;|&nbsp;
-        <a href="#">npm</a> &nbsp;|&nbsp;
-        <a href="#">Demo</a>
+        <a href="	https://github.com/P10911004-NPUST/normality">GitHub</a> &nbsp;|&nbsp;
+        <a href="https://cran.r-project.org/package=normality">CRAN</a> &nbsp;|&nbsp;
+        <a href="https://p10911004-npust.github.io/normality/articles/normality.html">Quick Start</a>
       </p>
     </div>
 
-    <h2>Contributions</h2>
-    <ul>
-      <li>Contributor to <strong>[Open Source Project Name]</strong> — 簡述你的貢獻內容。</li>
-      <li>Reviewer for <strong>[Journal/Conference Name]</strong> — 簡述審稿經驗。</li>
-    </ul>
+    <!-- venny -->
+    <div class="card">
+      <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px;">
+        <h2 style="margin: 0; font-size: 1.15rem;">
+          <img src="./img/Rlogo.svg" alt="R" style="height: 1em; width: auto; vertical-align: -0.15em;">
+          &nbsp;&nbsp;
+          <b>venny</b>
+        </h2>
+        <span class="muted">R · MIT License</span>
+      </div>
+      <p style="text-align: justify; margin: 10px 0 12px 0;">Venn Diagram</p>
+      <p style="margin: 0;">
+        <a href="	https://github.com/P10911004-NPUST/venny">GitHub</a> &nbsp;|&nbsp;
+        <a href="https://cran.r-project.org/package=venny">CRAN</a> &nbsp;|&nbsp;
+        <a href="https://p10911004-npust.github.io/venny/articles/venny.html">Quick Start</a>
+      </p>
+    </div>
+
+    <!-- outlying -->
+    <div class="card">
+      <div style="display: flex; justify-content: space-between; align-items: baseline; flex-wrap: wrap; gap: 8px;">
+        <h2 style="margin: 0; font-size: 1.15rem;">
+          <img src="./img/Rlogo.svg" alt="R" style="height: 1em; width: auto; vertical-align: -0.15em;">
+          &nbsp;&nbsp;
+          <b>outlying</b>
+        </h2>
+        <span class="muted">R · MIT License</span>
+      </div>
+      <p style="text-align: justify; margin: 10px 0 12px 0;">Outliers Detection</p>
+      <p style="margin: 0;">
+        <a href="	https://github.com/P10911004-NPUST/outlying">GitHub</a> &nbsp;|&nbsp;
+        <a href="https://cran.r-project.org/package=outlying">CRAN</a> &nbsp;|&nbsp;
+        <a href="https://p10911004-npust.github.io/outlying/articles/outlying.html">Quick Start</a>
+      </p>
+    </div>
+
+    <button class="back-to-top" type="button" aria-label="回到頁面頂部" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">
+      <span aria-hidden="true">↑</span>
+      <span>回到頂部</span>
+    </button>
 
     <footer>
-      <p>© 2026 Your Name. All rights reserved.</p>
+      <p>&copy; 2026 Lai Joon Keat. All rights reserved.</p>
     </footer>
   </div>
 </body>
