@@ -1,6 +1,6 @@
-# <b>Tissue Clearing</b>
+# <b>Chloral Hydrate tissue clearing</b>
 
-Classical plant tissue clearing method.
+A classical plant tissue clearing method.
 
 | Chemical          | Addition | Location |
 | :-------          | :---:    | :---:    |
