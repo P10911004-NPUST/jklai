@@ -26,5 +26,9 @@ A classical plant tissue clearing method.
 
 - The clearing process may takes from several hours to overnight, depend on the sample type.
 
-
 <hr><h2 style="text-align: center">Done !!!</h2><hr>
+
+<br>
+
+If you encounter any issues with the protocol, please report them at:  
+[https://github.com/P10911004-NPUST/jklai/issues](https://github.com/P10911004-NPUST/jklai/issues).

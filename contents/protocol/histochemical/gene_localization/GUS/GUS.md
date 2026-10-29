@@ -56,16 +56,33 @@ The working solution must be fresh-made and use immediately after prepared.
 
 1. Fully immersed the rice seedling in the GUS stain solution;
 
-2. Vacumm infiltration at room temperature for 30 mins to allow the solution penetrate completely into the tissue;
+2. Vacumm infiltration on ice for 30 mins to allow the solution completely penetrate into the tissue;
 
-3. Incubate at 37&deg;C in dark for 30 mins;
+3. Incubate at 37&deg;C in dark for 1&ndash;5 mins.
 
-4. (optional) Rinse with 75% or 95% ethanol until the chlorophyll was bleached;
+> - Incubation time may range from 1 min to 24 hours, depend on the organ/tissue type.
+> - For the QC region in root tip, &ge;5 mins will easily overstained.
 
-5. Rinse with water to fully wash out the stain solution;
+4. Rinse with water to fully wash out the stain solution.
 
-6. Observe under a dissection microscope.
+> - For leaf, rinse with 75% or 95% ethanol until the chlorophyll was bleached.
+
+5. Observe under a light microscope.
 
 <br>
 
 <hr><h2 style="text-align: center">Done !!!</h2><hr>
+
+<div style='page-break-after: always;'></div>
+
+## **Example image**
+
+<figure style="text-align: left; margin: 0;">
+    <img src="./GUS_illus.png" style="width: 50%; max-width: 600px; display: block;" />
+    <figcaption style="margin-top: 8px;">Figure 1. GUS staining of a rice root tip.</figcaption>
+</figure>
+
+<br>
+
+If you encounter any issues with the protocol, please report them at:  
+[https://github.com/P10911004-NPUST/jklai/issues](https://github.com/P10911004-NPUST/jklai/issues).
