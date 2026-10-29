@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>RNA_quality.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+pre code.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 1em
+}
+code.hljs {
+  padding: 3px 5px
+}
+/*
+Monokai style - ported by Luigi Maselli - http://grigio.org
+*/
+.hljs {
+  background: #272822;
+  color: #ddd
+}
+.hljs-tag,
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-literal,
+.hljs-strong,
+.hljs-number,
+.hljs-name {
+  color: #f92672
+}
+.hljs-code {
+  color: #66d9ef
+}
+.hljs-attribute,
+.hljs-attr,
+.hljs-symbol,
+.hljs-regexp,
+.hljs-link {
+  color: #bf79db
+}
+.hljs-string,
+.hljs-bullet,
+.hljs-subst,
+.hljs-title,
+.hljs-section,
+.hljs-emphasis,
+.hljs-type,
+.hljs-built_in,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-addition,
+.hljs-variable,
+.hljs-template-tag,
+.hljs-template-variable {
+  color: #a6e22e
+}
+.hljs-title.class_,
+.hljs-class .hljs-title {
+  color: white
+}
+.hljs-comment,
+.hljs-quote,
+.hljs-deletion,
+.hljs-meta {
+  color: #75715e
+}
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-literal,
+.hljs-doctag,
+.hljs-title,
+.hljs-section,
+.hljs-type,
+.hljs-selector-id {
+  font-weight: bold
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+<link rel="stylesheet" href="file://C:\\jklai\\github\\rice_heat-stress\\markdown\\markdown-style.css" type="text/css"><link rel="stylesheet" href="file://C:\\jklai\\project\\rice_heat-stress\\markdown\\markdown-style.css" type="text/css">
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<h1 id="bioanalyzer-rna-analysis"><b>BioAnalyzer RNA analysis</b></h1>
+<h3 id="bioanalyzer-rna-analysis--quick-start-manual-"><a href='https://www.agilent.com/en/product/automated-electrophoresis/bioanalyzer-systems/bioanalyzer-rna-kits-reagents/bioanalyzer-rna-analysis-228256'>BioAnalyzer RNA analysis</a> ( <a href='https://www.agilent.com/cs/library/usermanuals/public/RNA-6000-Nano_QSG.pdf'>Quick start</a>, <a href='https://www.agilent.com/cs/library/usermanuals/public/G2938-90034_RNA6000Nano_KitGuide.pdf'>Manual</a> )</h3>
+<h1 id="preparation">Preparation</h1>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Item</th>
+<th style="text-align:center">Amount</th>
+<th style="text-align:center">Location</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><b>Nano Chips <sup>α</sup></b></td>
+<td style="text-align:center"></td>
+<td style="text-align:center">Ⅵ</td>
+</tr>
+<tr>
+<td style="text-align:left">RNA Nano Chips</td>
+<td style="text-align:center">25</td>
+<td style="text-align:center">RNA bench, Reuse</td>
+</tr>
+<tr>
+<td style="text-align:left">Electrode Cleaners</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">RNA bench, Reuse</td>
+</tr>
+<tr>
+<td style="text-align:left"><b>Reagents <sup>β</sup></b></td>
+<td style="text-align:center"></td>
+<td style="text-align:center">−80°C ( upper door-2-1-4 )</td>
+</tr>
+<tr>
+<td style="text-align:left"><div style='color: forestgreen'>(green) RNA 6000 Nano Marker</div></td>
+<td style="text-align:center">2 vials</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><div style='color: royalblue'>(blue) RNA 6000 Nano Dye Concentrate</div></td>
+<td style="text-align:center">1 vial</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><div style='color: red'>(red) RNA 6000 Nano Gel Matrix</div></td>
+<td style="text-align:center">2 vials</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><b>Supplies <sup>γ</sup></b></td>
+<td style="text-align:center"></td>
+<td style="text-align:center">−80°C ( upper door-2-1-4 )</td>
+</tr>
+<tr>
+<td style="text-align:left"><div style='color: orange'>(yellow) RNA 6000 Nano Ladder</div></td>
+<td style="text-align:center">1 vial</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:left"><b>Chip Priming Station <sup>δ</sup></b></td>
+<td style="text-align:center">1 unit</td>
+<td style="text-align:center">Lab 236 middle bench</td>
+</tr>
+<tr>
+<td style="text-align:left"><b>Syringe <sup>ε</sup></b></td>
+<td style="text-align:center">1 unit</td>
+<td style="text-align:center">Lab 236 middle bench</td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+</tr>
+</tbody>
+</table>
+<p><sup>α</sup> <strong>Nano Chips</strong>: <a href='https://www.agilent.com/store/productDetail.jsp?catalogId=5067-1511'>Agilent RNA 6000 Nano Kit (5067-1511)</a></p>
+<p><sup>β</sup> <strong>Reagents</strong>: <a href='https://www.agilent.com/store/productDetail.jsp?catalogId=5067-1512'>Agilent RNA 6000 Nano Reagents (5067-1512)</a></p>
+<ul>
+<li><g style='color: forestgreen'>The marker is transparent color, we already aliquoted it as 75 μL per vial ( marked as &quot;M&quot; )</g>.</li>
+<li><g style='color: royalblue'>The dye concentrate is blue color, we already aliquoted it as 2 μL per vial ( marked as &quot;D&quot; )</g></li>
+<li><g style='color: red'>The gel matrix is transparent color, put in the same pack with the dye concentrate. We already aliquoted it as 65 μL per vial ( marked as &quot;G&quot; )</g></li>
+</ul>
+<p><sup>γ</sup> <strong>Supplies</strong>: <a href='https://www.agilent.com/store/productDetail.jsp?catalogId=5067-1529'>Agilent RNA 6000 Nano Ladder (5067-1529)</a></p>
+<ul>
+<li>
+<div style='color: orange'>The ladder is transparent color, we already aliquoted it as 2 &mu;L per vial</div>
+</li>
+</ul>
+<p><sup>δ</sup> <strong>Chip Priming Station</strong>: <a href='https://www.agilent.com/store/productDetail.jsp?catalogId=5065-4401'>Bioanalyzer Parts &amp; Accessories (5065-4401)</a></p>
+<p><sup>ε</sup> <strong>Syringe Kit</strong>: <a href='https://www.agilent.com/store/productDetail.jsp?catalogId=G2938-68706'>Syringe Kit (G2938-68706)</a></p>
+<div style='page-break-after: always;'></div>
+<h1 id="procedure">Procedure</h1>
+<p>All instruments should be sterilized prior to the experiment</p>
+<h2 id="step-1-gel-dye-mix"><strong>Step 1: Gel-Dye Mix</strong></h2>
+<p>One set of Gel-Dye Mix is for one chip ( 12 wells ).</p>
+<ol>
+<li>
+<p>Allow the <b style='color: royalblue'>RNA dye concentrate</b> ( 🔵 ) equilibrate to room temperature ( <b style='color: darkorange'>25°C</b> ) for <b style='color: darkorange'>30 mins</b>.</p>
+</li>
+<li>
+<p>Vortex the <b style='color: royalblue'>RNA dye concentrate</b> ( 🔵 ) for <b style='color: darkorange'>10 secs</b>, spin down and add <b style='color: royalblue'>1 μL dye</b> into a <b style='color: red'>65 μL gel matrix aliquot</b>.</p>
+</li>
+<li>
+<p>Vortex solution well. Centrifuge ( <b style='color: darkorange'>13,000 g</b>, <b style='color: darkorange'>10 mins</b> ) at 25°C. Use the prepared <b style='color: #40B5AD'>Gel-Dye Mix</b> within one day.</p>
+</li>
+</ol>
+<h2 id="step-2-decontaminate-the-instrument-electrode"><strong>Step 2: Decontaminate the instrument electrode</strong></h2>
+<ol>
+<li>
+<p>Pipette <b style='color: darkorange'>350 μL RNaseZap™ solution</b> into an Electrode Cleaner ( we reuse this, marked as &quot;RNaseZap&quot; ). Close the machine lid to submerge the electrode probe into the solution for <b style='color: darkorange'>3 mins</b>.</p>
+</li>
+<li>
+<p>Pipette <b style='color: darkorange'>350 μL RNase-free water</b> into an Electrode Cleaner ( we reuse this, marked as &quot;RNase-free water&quot; ). Close the machine lid to submerge the electrode probe into the water for <b style='color: darkorange'>3 mins</b>.</p>
+</li>
+<li>
+<p>Keep the lid opened for <b style='color: darkorange'>1 min</b> to <b style='color: darkorange'>air-dry</b> the electrode.</p>
+</li>
+</ol>
+<h2 id="during-this-period-switch-on-pc-and-execute-the-2100-expert-software">During this period, switch on PC and execute the <code>2100 Expert</code> software</h2>
+<h2 id="step-3-load-gel-dye-mix"><strong>Step 3: Load <b style='color: #40B5AD'>Gel-Dye Mix</b></strong></h2>
+<ol>
+<li>
+<p>Put a new RNA Nano Chip on the Chip Priming Station.</p>
+</li>
+<li>
+<p>Pipette <b style='color: #40B5AD'>9 μL</b> of <b style='color: #40B5AD'>Gel-Dye Mix</b> into the well marked <span style="display: inline-block; width: 1.2em; height: 1.2em; line-height: 1.2em; text-align: center; background-color: black; color: white; border-radius: 50%; font-weight: bold;">G</span> ( only one well ).</p>
+</li>
+<li>
+<p>Make sure the <b style='color: darkorange'>plunger</b> is <b style='color: darkorange'>positioned at 1 mL</b> and then close the Chip Priming Station. Make sure you hear a click sound to confirm that the latch is securely snapped.</p>
+</li>
+<li>
+<p>Press the plunger until it is held by the clip.</p>
+</li>
+<li>
+<p>Wait for exactly <b style='color: darkorange'>30 secs</b> then release clip.</p>
+</li>
+<li>
+<p>Wait for <b style='color: darkorange'>5 secs</b>. Slowly <b style='color: darkorange'>pull back plunger</b> to <b style='color: darkorange'>1 mL position</b>. Open the Chip Priming Station.</p>
+</li>
+<li>
+<p>Pipette <b style='color: #40B5AD'>9 μL</b> of <b style='color: #40B5AD'>Gel-Dye Mix</b> into the wells marked <span style="display: inline-block; width: 1.2em; height: 1.2em; line-height: 1.2em; text-align: center; background-color: white; color: black; border: 1px solid black; border-radius: 50%; font-weight: bold;">G</span> ( two wells ).</p>
+</li>
+<li>
+<p>Discard the remaining Gel-Dye Mix.</p>
+</li>
+</ol>
+<h2 id="step-4-load-marker"><strong>Step 4: Load <b style='color: forestgreen'>Marker</b></strong></h2>
+<ol>
+<li>
+<p>Pipette <b style='color: forestgreen'>5 μL</b> of <b style='color: forestgreen'>RNA marker</b> in all 12 sample wells.</p>
+</li>
+<li>
+<p>Pipette <b style='color: forestgreen'>5 μL</b> of <b style='color: forestgreen'>RNA marker</b> in the ladder well marked with a ladder symbol 🪜 ( only one well ).</p>
+</li>
+</ol>
+<ul>
+<li>We prepared 75 μL marker per vial. So now we already load in 65 μL into the chip. The remaining 10 μL is, for the empty sample wells, in case you don't have 12 RNA samples. The machine requires all sample wells must have same volume.</li>
+</ul>
+<h2 id="step-5-load-ladder"><strong>Step 5: Load <b style='color: orange'>Ladder</b></strong></h2>
+<ol>
+<li>Pipette <b style='color: orange'>1 μL</b> of <b style='color: orange'>RNA ladder</b> in the ladder well marked with a ladder symbol 🪜 ( only one well ).</li>
+</ol>
+<h2 id="step-6-load-samples-rna"><strong>Step 6: Load samples RNA</strong></h2>
+<ol>
+<li>Pipette <b style='color: darkorange'>1 μL</b> of <b style='color: darkorange'>sample</b> in each of the 12 sample wells.</li>
+</ol>
+<blockquote>
+<ul>
+<li>substitute with <b style='color: forestgreen'>1 μL Marker</b> for unused sample wells.</li>
+</ul>
+</blockquote>
+<ol start="2">
+<li>
+<p>Put the chip <b style='color: darkorange'>horizontally</b> in the <b style='color: darkorange'>IKA vortexer</b> and vortex for <b style='color: darkorange'>1 min</b> at <b style='color: darkorange'>2400 rpm</b>. Hover your hand over the chip because it might fly out due to an overly strong vortex.</p>
+</li>
+<li>
+<p>Run the chip in the Agilent 2100 Bioanalyzer instrument within 5 mins.</p>
+</li>
+</ol>
+<h2 id="step-7-on-machine"><strong>Step 7: On-machine</strong></h2>
+<ol>
+<li>
+<p>Put the chip into the slot ( the shape of the upper right corner of the chip should be matched ). Close the machine lid gently to submerge the electrode into the chip.</p>
+</li>
+<li>
+<p>Execute the <code>2100 Expert</code> software.</p>
+</li>
+<li>
+<p>Navigate to <code>Assays</code> → <code>RNA</code> → <code>Plant RNA Nano.xsy</code>.</p>
+</li>
+<li>
+<p>Key in your sample name / ID to the list at lower left side.</p>
+</li>
+<li>
+<p>Make sure the <code>Start Run Checklist</code> at the lower right side are all checked.</p>
+</li>
+<li>
+<p>Press <code>Start</code> and wait for 5 ~ 10 mins for the machine checking.</p>
+</li>
+<li>
+<p>Wait for ≈ 40 mins for the chip to be read.</p>
+</li>
+<li>
+<p>After finishing, discard the chip and clean up the electrode as the procedure in <b>Step 2: Decontaminate the instrument electrode</b>. You can skip the RNaseZap step.</p>
+</li>
+<li>
+<p>Check and save all the data with a single PDF report, use <code>File</code> → <code>Print</code></p>
+</li>
+</ol>
+<blockquote>
+<ul>
+<li>Quick look at RIN value, <code>Data</code> → <code>Chip summary</code></li>
+<li>Quick look at RNA concentration, <code>Data</code> → <code>Electropherogram</code></li>
+</ul>
+</blockquote>
+<p><br><hr><h2 style="text-align: center">Done !!!</h2><hr></p>
+<div style='page-break-after: always;'></div>
+
+</body>
+</html>

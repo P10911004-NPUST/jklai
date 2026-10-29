@@ -4,19 +4,17 @@
 
 ### <a href="https://www.thermofisher.com/order/catalog/product/E10187">Invitrogen&trade; EdU (5-ethynyl-2'-deoxyuridine)</a> ( <a href="https://documents.thermofisher.com/TFS-Assets/LSG/manuals/mp10044.pdf">Manual</a> )
 
-<hr>
-
 > EdU ( 5-Ethynyl-2'-deoxyuridine)  
-
 > Molecular weight: 252.22 g / mol  
 
-> ### Solubility:
-> | Solvent         | Maximum solubility | Concentration |
-> | :----------:    | :---:              | :---:         |
-> | DMSO            | 25 mg / mL         | 100 mM        |
-> | water           | 6.25 mg / mL       |  25 mM        |
-> | aqueous buffer  | 6.25 mg / mL       |  25 mM        |
-> ||||
+### Solubility:
+
+| Solvent         | Maximum solubility | Concentration |
+| :----------:    | :---:              | :---:         |
+| DMSO            | 25 mg / mL         | 100 mM        |
+| water           | 6.25 mg / mL       |  25 mM        |
+| aqueous buffer  | 6.25 mg / mL       |  25 mM        |
+||||
 
 <br>
 
@@ -28,7 +26,7 @@
 | :---------------------------      | :-----:       | :------------------:   |
 | Phosphate buffer saline ( PBS )   | 1X            | JK's bench             |
 | Fixative solution                 | 4%            | biosafety cabinet      |
-| Fluoromount-G                     | --            | 4&deg;C ( d )          |
+| Fluoromount-G                     | &mdash;       | 4&deg;C ( d )          |
 ||||
 
 <br>
@@ -38,20 +36,20 @@
 
 ## **Step 1: Labeling**
 
-1. Prepare <b style='color: violet'>incubation medium</b> containing <b style='color: violet'>10 <i>&micro;</i>M Component A ( EdU )</b>;
+1. Prepare <b style='color: violet'>incubation medium</b> containing <b style='color: violet'>10 <i>&mu;</i>M Component A ( EdU )</b>;
 
-- Component A ( 100 <i>&micro;</i>M stock ) is stored at 4&deg;C ( e-bottom-left ) JK's green box ( top-left corner side ).
+- Component A ( 100 <i>&mu;</i>M stock ) is stored at 4&deg;C ( e-bottom-left ) JK's green box ( top-left corner side ).
 
-- Generally we make 40 mL incubation medium in 50 mL falcon tube for each treatment groups. For example, if we have 6 treatment groups, add 25 <i>&micro;</i>L Component A stock ( 100 <i>&micro;</i>M ) into 250 mL medium and mix thoroughly. Then, dispense 40 mL to each tube.
+- Generally we make 40 mL incubation medium in 50 mL falcon tube for each treatment groups. For example, if we have 6 treatment groups, add 25 <i>&mu;</i>L Component A stock ( 100 <i>&mu;</i>M ) into 250 mL medium and mix thoroughly. Then, dispense 40 mL to each tube.
 
-> The manufacturer's manual suggests to dilute the EdU from 10 mM to 10 <i>&micro;</i>M for <i>in vitro</i> experiment. When EdU was dissolved in DMSO, this concentration of DMSO might facilitate the entry of organic molecules into tissue. However, 0.1% of DMSO will affect root growth. So, consider to make higher concentration of EdU stocks, change solvent, or reduce the working solution concentration. Currently, this protocol uses higher concentration of EdU stock ( 100 <i>&micro;</i>M ), and the staining result is statisfiying.
+> The manufacturer's manual suggests to dilute the EdU from 10 mM to 10 <i>&mu;</i>M for <i>in vitro</i> experiment. When EdU was dissolved in DMSO, this concentration of DMSO might facilitate the entry of organic molecules into tissue. However, 0.1% of DMSO will affect root growth. So, consider to make higher concentration of EdU stocks, change solvent, or reduce the working solution concentration. Currently, this protocol uses higher concentration of EdU stock ( 100 <i>&mu;</i>M ), and the staining result is statisfiying.
 
 2. Incubate the plants in the <b style='color: violet'>incubation medium</b> in the same cultivation condition for <b style='color: violet'>1 hour</b>.
 - Directly immersed the roots into the solution, <b style='color: red'>DO NOT</b> cut the shoot part, the plant should still alive. Fully submerged the root into the solution. Do not over-pushing, avoid roots injury. 
 
 ## **Step 2: Fixation**
 
-1. Prepare <b style='color: violet'>400 <i>&micro;</i>L fixative solution</b> in eppendorf for each group of sample;
+1. Prepare <b style='color: violet'>400 <i>&mu;</i>L fixative solution</b> in eppendorf for each group of sample;
 
 2. Cut the root tip ( around 1 cm ) and fully immerse in the fixative solution;
 
@@ -59,10 +57,11 @@
 
 3. Incubate <b style='color: violet'>24 hours</b> at <b style='color: violet'>room temperature</b>;
 
-- Incubation time can be varying from 30 minutes to 24 hours, depends on the sample condition. The longer the incubation time, the weaker the background autofluorescence and the EdU signal. When dealing with thick tissues, short incubation time may results incomplete penetration of the fixative solution, background autofluorescence, and too-strong EdU signal (false positive??). We incubate 24 hours to achieve clean background and optimal EdU signal intensity.
+> - Incubation time can be varying from 30 minutes to 24 hours, depends on the sample condition. The longer the incubation time, the weaker the background autofluorescence and the EdU signal. When dealing with thick tissues, short incubation time may results incomplete penetration of the fixative solution, background autofluorescence, and too-strong EdU signal (false positive??). We incubate 24 hours to achieve clean background and optimal EdU signal intensity.
 
-4. Remove fixative solution and add <b style='color: violet'>400 <i>&micro;</i>L 1X PBS</b> to wash the roots. Gently pipetting 5-10 times ( avoid touching the root tip ), then leave on the benchtop for 10 mins. Repeat this wash procedure around 5 times ( <b style='color: violet'>5 &times; 10 mins</b> ) until no bubbles appear.
-- <b style='color: darkorange'>Discard the fixative solution in the dark blue toxic carboy under the toxic cabinet;</b>
+4. Remove fixative solution and add <b style='color: violet'>400 <i>&mu;</i>L 1X PBS</b> to wash the roots. Gently pipetting 5-10 times ( avoid touching the root tip ), then leave on the benchtop for 10 mins. Repeat this wash procedure around 5 times ( <b style='color: violet'>5 &times; 10 mins</b> ) until no bubbles appear.
+
+> - <b style='color: red'>Discard the fixative solution in the dark blue toxic carboy under the toxic cabinet;</b>
 
 5. (optional) You can keep the samples in 1X PBS solution up to 48 hours in 4&deg;C protected from light after washing out the fixative solution.
 
@@ -73,7 +72,7 @@
 
 ### **Prepare the cocktail**
 
-1. Place all the components <b style='color: violet'>on ice</b> and <b style='color: violet'>protected from light</b>. Prepare the cocktail as much as necessary only for that day's experiments, and use on the same day.
+1. Place all the components <b style='color: red'>on ice</b> and <b style='color: red'>protected from light</b>. Prepare the cocktail as much as necessary only for that day's experiments, and use on the same day.
 > - Component B, C, and D are stored at 4&deg;C, in the kit box.
 > - Component E ( 10X stock ) is stored at &minus;20&deg;C in JK's white box.
 > - Component F is stored at 4&deg;C, placed in front of the kit box.
@@ -82,22 +81,22 @@
 - <b style='color:red'>Add the incredients in the order listed in the table</b>; otherwise, the reaction will not proceed optimally.</i>
 - The cocktail must be <b style='color:red'>used immediately</b> after preparation. The Click-iT&reg; reaction buffer additive is susceptable to oxidation and is the limiting factor to the Click-iT&reg; reaction cocktail's effectiveness over time.</i></b>
 
-> | Component        | Material name                               | Addition per sample         | Note              |
-> | :------:         | :---------------------------------------    |:-------------------:        | :-----:           |
-> | ddH<sub>2</sub>O | deionized ultrapure water                   | 171 <i>&micro;</i>L         |                   |
-> | C                | **10X** Click-iT&reg; EdU reaction buffer   | 17 <i>&micro;</i>L          |                   |
-> | D                | CuSO<sub>4</sub>                            | 8 <i>&micro;</i>L           |                   |
-> | B                | Alexa Fluor&reg; azide                      | 0.5 <i>&micro;</i>L         | keep in dark      |
-> | E                | **10X** Click-iT&reg; EdU buffer additive   | 2 <i>&micro;</i>L           | add before use    |
-> | Total:           |                                             | 198.5 <i>&micro;</i>L       | take 195 &micro;L |
+> | Component        | Material name                             | Addition per sample       | Note                  |
+> | :------:         | :---------------------------------------  |:-------------------:      | :-----:               |
+> | ddH<sub>2</sub>O | deionized ultrapure water                 | 171 <i>&mu;</i>L          |                       |
+> | C                | **10X** Click-iT&reg; EdU reaction buffer | 17 <i>&mu;</i>L           |                       |
+> | D                | CuSO<sub>4</sub>                          | 8 <i>&mu;</i>L            |                       |
+> | B                | Alexa Fluor&reg; azide                    | 0.5 <i>&mu;</i>L          | keep in dark          |
+> | E                | **10X** Click-iT&reg; EdU buffer additive | 2 <i>&mu;</i>L            | add before use        |
+> | <b>Total:</b>    |                                           | <b>198.5 <i>&mu;</i>L</b> | <b>take 195 &mu;L</b> |
 
 ### **Incubation**
 
-3. Remove wash solution and add <b style='color: violet'>195 <i>&micro;</i>L</b> of <b style='color: violet'>Click-iT&reg; reaction cocktail</b> ( prepare as the table above ) for each sample;
+3. Remove wash solution and add <b style='color: violet'>195 <i>&mu;</i>L</b> of <b style='color: violet'>Click-iT&reg; reaction cocktail</b> ( prepare as the table above ) for each sample;
 
 4. Incubate for <b style='color: violet'>30 minutes</b> at <b style='color: violet'>room temperature</b>. Must be <b style='color: red'>protected from light</b>;
 
-5. Remove the reaction cocktail and wash once with <b style='color: violet'>400 <i>&micro;</i>L</b> of <b style='color: violet'>Click-iT&reg; reaction rince buffer ( Component F )</b> ( 1 &times; 15 mins );
+5. Remove the reaction cocktail and wash once with <b style='color: violet'>400 <i>&mu;</i>L</b> of <b style='color: violet'>Click-iT&reg; reaction rince buffer ( Component F )</b> ( 1 &times; 15 mins );
 
 6. <b style='color: violet'>Wash 5 times</b> with 1X PBS ( <b style='color: violet'>5 &times; 15 mins</b> );
 
@@ -109,24 +108,22 @@
 
 ## **Step 4: Confocal parameters**
 
-Mount on slide with <b style='color: violet'>Fluoromount-G anti-fade</b><sup>&dagger;</sup> solution. Using ddH<sub>2</sub>O is also fine if the laser intensity is low and the laser exposure time ( image capturing time ) is short.  
-
-<sup>&dagger;</sup> Located at 4&deg;C (d). 
+Mount on slide with <b style='color: violet'>Fluoromount-G anti-fade</b> solution ( located at 4&deg;C (d) ). Using ddH<sub>2</sub>O is also fine if the laser intensity is low and the laser exposure time ( image capturing time ) is short.
 
 Set the confocal parameters as follow:
 
-| Parameters                                                 | Theoretical value | Our machine                 |
-|:--------------------------------------------------------   |:-----------------:|:--------------------:       |
-| Excitation peak                                            | 495 nm            | 488 nm                      |
-| Emission peak                                              | 519 nm            | 499 ~ 539 nm                |
-| Magnification                                              |                   | 10X                         |
-| Laser intensity ( <b style='color: #97ed1d'>488 nm</b> ) |                   | 16.0%                       |       
-| Master Gain                                                |                   | 700 V                       |
-| Digital Gain                                               |                   | 1.0                         |
-| Pinhole                                                    |                   | &approx; 32 <i>&micro;</i>m |
-| Z-stack interval                                           |                   | 4 <i>&micro;</i>m           |
-| Scan speed                                                 |                   | 6                           |
-| Scan direction                                             |                   | <b>&xharr;</b>              |
+| Parameters                                               | Theoretical value | Our machine              |
+|:-------------------------------------------------------- |:-----------------:|:--------------------:    |
+| Excitation peak                                          | 495 nm            | 488 nm                   |
+| Emission peak                                            | 519 nm            | 499 ~ 539 nm             |
+| Magnification                                            |                   | 10X                      |
+| Laser intensity ( <b style='color: #97ed1d'>488 nm</b> ) |                   | 16.0%                    |       
+| Master Gain                                              |                   | 700 V                    |
+| Digital Gain                                             |                   | 1.0                      |
+| Pinhole                                                  |                   | &approx; 32 <i>&mu;</i>m |
+| Z-stack interval                                         |                   | 4 <i>&mu;</i>m           |
+| Scan speed                                               |                   | 6                        |
+| Scan direction                                           |                   | <b>&xharr;</b>           |
 ||||
 
 <br>
@@ -136,9 +133,10 @@ Set the confocal parameters as follow:
 ## **Step 5: Image processing**
 
 1. Use <b style='color: violet'>ImageJ</b> with <b style='color: violet'>bioformats_package.jar</b> plugin to proceed the confocal images;
-- The plugin ( bioformats_package.jar ) can be downloaded from <a href='https://www.openmicroscopy.org/bio-formats/downloads/'>https://www.openmicroscopy.org/bio-formats/downloads/</a>
 
-- The plugin should be placed in the <b><i>"/ImageJ/plugins/jars"</i></b> directory
+> - The plugin ( bioformats_package.jar ) can be downloaded from <a href='https://www.openmicroscopy.org/bio-formats/downloads/'>https://www.openmicroscopy.org/bio-formats/downloads/</a>
+> - The plugin should be placed in the <b><i>"/ImageJ/plugins/jars"</i></b> directory
+
 2. Open the confocal .czi file with the ImageJ, the "<b>Bio-Formats Import Options</b>" will automatically pop up;
 
 3. Select the options as follow:
@@ -151,20 +149,18 @@ Set the confocal parameters as follow:
 > |||
 
 4. Stack the image layers and perform max intensity projection along the Z-axis;
-- `Image` &rarr; `Stacks` &rarr; `Z project...` &rarr; `Projection type: Max Intensity`
-
-> Optional: Shows scale bar in the image.  
-> `Analyze` &xrarr; `Tools` &xrarr; `Scale Bar...`
+> - `Image` &rarr; `Stacks` &rarr; `Z project...` &rarr; `Projection type: Max Intensity`
+> - Optional: Shows scale bar in the image.  
+>   - `Analyze` &xrarr; `Tools` &xrarr; `Scale Bar...`
 
 5. Save the images as TIFF format;
-- `File` &rarr; `Save as` &rarr; `Tiff...`
+
+> - `File` &rarr; `Save as` &rarr; `Tiff...`
+
 6. Select the region of interest (ROI) and measure.
 
-<br>
+<br><hr><h2 style="text-align: center">Done !!!</h2><hr>
 
-<hr><h2 style="text-align: center">Done !!!</h2><hr>
-
-<br>
 <div style='page-break-after: always;'></div>
 
 <!-- ================================================================================================================= -->
@@ -175,8 +171,8 @@ Set the confocal parameters as follow:
 
 | Component              | Material name                           | C10351 <sup>*</sup> | Concentration | Location         |
 | :-----:                | :-------------------------              | :-----:             | :-----:       | :---:            |
-| A <sup>&alpha;</sup>   | EdU **working solution**                | 525 &micro;L        | 10 mM         | 4&deg;C ( c )    |
-| B <sup>&beta;</sup>    | Alexa Fluor&reg; azide 488              | 330 &micro;L        | 1X            | 4&deg;C ( c )    |
+| A <sup>&alpha;</sup>   | EdU **working solution**                | 525 &mu;L           | 10 mM         | 4&deg;C ( c )    |
+| B <sup>&beta;</sup>    | Alexa Fluor&reg; azide 488              | 330 &mu;L           | 1X            | 4&deg;C ( c )    |
 | C <sup>&gamma;</sup>   | Click-iT&reg; EdU **reaction buffer**   | 15 mL               | 10X           | 4&deg;C ( c )    |
 | D <sup>&delta;</sup>   | CuSO<sub>4</sub>                        | 1 vial              | 100 mM        | 4&deg;C ( c )    |
 | E <sup>&epsilon;</sup> | Click-iT&reg; EdU **buffer additive**   | 400 mg              | 10X           | &minus;20&deg;C  |
@@ -185,7 +181,7 @@ Set the confocal parameters as follow:
 
 <sup>*</sup> **C10351**: Catalogue number. All the raw materials in this kit should be stored at <b style='color: violet'>2 ~ 6&deg;C</b>, <b style='color: violet'>dessiccated</b>, <b style='color: violet'>protect from light</b>, and <b style='color: violet'>DO NOT FREEZE</b>.  
 
-<sup>&alpha;</sup> **Component A**: This is the EdU chemical stock solution. Dilute to 10 <i>&micro;</i>M in complete medium on the day of the experiment, and use immediately. The 10 mM stock solution is stored at &minus;20&deg;C ( the EdU powder also put in &minus;20&deg;C, in JK's white box ), and the 10 mM aliquots are stored at 4&deg;C (in the EdU kit box, put together with the other components).
+<sup>&alpha;</sup> **Component A**: This is the EdU chemical stock solution. Dilute to 10 <i>&mu;</i>M in complete medium on the day of the experiment, and use immediately. The 10 mM stock solution is stored at &minus;20&deg;C ( the EdU powder also put in &minus;20&deg;C, in JK's white box ), and the 10 mM aliquots are stored at 4&deg;C (in the EdU kit box, put together with the other components).
 
 <sup>&beta;</sup> **Component B**: Fluorescence probe. Protected from light.
 
@@ -194,7 +190,7 @@ The 1X solution could be stored at 2 ~ 6&deg;C for 6 months.
 
 <sup>&delta;</sup> **Component D**: Catalyze the reaction.
 
-<sup>&epsilon;</sup> **Component E**: Add 2 mL ddH<sub>2</sub>O to the vial of the Component E, mix until fully dissolve the powder to 10X solution. The stock should be dispense into several aliquots ( 400 <i>&micro;</i>L each eppendorf for example ) to avoid too frequent thawing and freezing, to prolong the storage lifespan. The <b style='color: violet'>10X solution</b> could be stored at <b style='color: violet'>&leq; &minus;20&deg;C</b> for up to 1 year. If the solution develops a brown color, it has degraded and should be discarded.
+<sup>&epsilon;</sup> **Component E**: Add 2 mL ddH<sub>2</sub>O to the vial of the Component E, mix until fully dissolve the powder to 10X solution. The stock should be dispense into several aliquots ( 400 <i>&mu;</i>L each eppendorf for example ) to avoid too frequent thawing and freezing, to prolong the storage lifespan. The <b style='color: violet'>10X solution</b> could be stored at <b style='color: violet'>&leq; &minus;20&deg;C</b> for up to 1 year. If the solution develops a brown color, it has degraded and should be discarded.
 
 <sup>&zeta;</sup> **Component F**: Used to wash cells after the Click-iT&reg; reaction cocktail incubation step. This helps to remove unreacted components and reduce background. Located at 4 &deg;C ( c ), in front of the EdU kit boxes.
 
@@ -221,11 +217,26 @@ The 1X solution could be stored at 2 ~ 6&deg;C for 6 months.
 <br>
 
 ## Fixative solution</b>
-> | Chemical            | Addition      | Final concentration | Storage location |
-> |:------------------- | -------------:|:-------------------:|:----------------:|
-> | Formaldehyde (38%)  | 105 &micro;L  | 4%                  | Toxic cabinet D  |
-> | Triton X-100 (100%) | 1 &micro;L    | 0.1%                | IV               |
-> | 1X PBS              | 894 &micro;L  |                     |                  |
-> | Total:              | 1000 &micro;L |                     |                  |
+> | Chemical            | Addition          | Final concentration | Storage location |
+> |:------------------- | -------------:    |:-------------------:|:----------------:|
+> | Formaldehyde (38%)  | 105 &mu;L         | 4%                  | Toxic cabinet D  |
+> | Triton X-100 (100%) | 1 &mu;L           | 0.1%                | IV               |
+> | 1X PBS              | 894 &mu;L         |                     |                  |
+> | <b>Total:</b>       | <b>1000 &mu;L</b> |                     |                  |
+
+<div style='page-break-after: always;'></div>
+
+## **Example images**
+
+<figure style="text-align: left; margin: 0;">
+    <img src="./EdU_problem.png" style="width: 100%; max-width: 600px; display: block; background-color: black" />
+    <figcaption style="margin-top: 8px;">Figure 1. Example of EdU incomplete stained (left panel) and autofluorescence background (right panel).</figcaption>
+    <br>
+    <img src="./EdU_illus.png" style="width: 100%; max-width: 600px; display: block; background-color: black" />
+    <figcaption style="margin-top: 8px;">Figure 2. Example of normal EdU signal.</figcaption>
+</figure>
 
 <br>
+
+If you encounter any issues with the protocol, please report them at:  
+[https://github.com/P10911004-NPUST/jklai/issues](https://github.com/P10911004-NPUST/jklai/issues).

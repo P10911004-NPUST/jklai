@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>RNA_extract_5ug.md</title>
+<meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+pre code.hljs {
+  display: block;
+  overflow-x: auto;
+  padding: 1em
+}
+code.hljs {
+  padding: 3px 5px
+}
+/*
+Monokai style - ported by Luigi Maselli - http://grigio.org
+*/
+.hljs {
+  background: #272822;
+  color: #ddd
+}
+.hljs-tag,
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-literal,
+.hljs-strong,
+.hljs-number,
+.hljs-name {
+  color: #f92672
+}
+.hljs-code {
+  color: #66d9ef
+}
+.hljs-attribute,
+.hljs-attr,
+.hljs-symbol,
+.hljs-regexp,
+.hljs-link {
+  color: #bf79db
+}
+.hljs-string,
+.hljs-bullet,
+.hljs-subst,
+.hljs-title,
+.hljs-section,
+.hljs-emphasis,
+.hljs-type,
+.hljs-built_in,
+.hljs-selector-attr,
+.hljs-selector-pseudo,
+.hljs-addition,
+.hljs-variable,
+.hljs-template-tag,
+.hljs-template-variable {
+  color: #a6e22e
+}
+.hljs-title.class_,
+.hljs-class .hljs-title {
+  color: white
+}
+.hljs-comment,
+.hljs-quote,
+.hljs-deletion,
+.hljs-meta {
+  color: #75715e
+}
+.hljs-keyword,
+.hljs-selector-tag,
+.hljs-literal,
+.hljs-doctag,
+.hljs-title,
+.hljs-section,
+.hljs-type,
+.hljs-selector-id {
+  font-weight: bold
+}
+</style>
+
+<style>
+/*
+ * Markdown PDF CSS
+ */
+
+ body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> or <div class="page"></div> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+<link rel="stylesheet" href="file://C:\\jklai\\github\\rice_heat-stress\\markdown\\markdown-style.css" type="text/css"><link rel="stylesheet" href="file://C:\\jklai\\project\\rice_heat-stress\\markdown\\markdown-style.css" type="text/css">
+<script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+</head>
+<body>
+  <script>
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: document.body.classList.contains('vscode-dark') || document.body.classList.contains('vscode-high-contrast')
+          ? 'dark'
+          : 'default'
+    });
+  </script>
+<!-- <style>body {text-align: justify}</style> -->
+<h1 id="rna-extraction--5-μg"><b>RNA extraction (≥ 5 <i>μ</i>g)</b></h1>
+<h3 id="rneasy-plant-mini-kit--manual--or-rneasy-plus-mini-kit--manual-"><a href='https://www.qiagen.com/us/products/discovery-and-translational-research/dna-rna-purification/rna-purification/total-rna/rneasy-plant-mini-kit'>RNeasy® Plant Mini Kit</a> ( <a href='https://www.qiagen.com/us/resources/kithandbookandprotocol/hb-0435-007-hb-rnymini-0623-ww'>Manual</a> ) or <a href='https://www.qiagen.com/us/products/discovery-and-translational-research/dna-rna-purification/rna-purification/total-rna/rneasy-plus-kits'>RNeasy® Plus Mini Kit</a> ( <a href='https://www.qiagen.com/en-us/resources/download/kithandbookandprotocol/hb-0405-005-hb-rny-plus-0920-ww'>Manual</a> )</h3>
+<h1 id="preparation">Preparation</h1>
+<p>Usage amount per sample:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Chemical</th>
+<th style="text-align:center">Concentration</th>
+<th style="text-align:right">Amount</th>
+<th style="text-align:center">Location</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Buffer RLT mixture <sup>α</sup></td>
+<td style="text-align:center">−</td>
+<td style="text-align:right">450 <i>μ</i>L</td>
+<td style="text-align:center">RNA bench</td>
+</tr>
+<tr>
+<td style="text-align:left">Buffer RW1 <sup>β</sup></td>
+<td style="text-align:center">−</td>
+<td style="text-align:right">700 <i>μ</i>L</td>
+<td style="text-align:center">RNA bench</td>
+</tr>
+<tr>
+<td style="text-align:left">Buffer RPE working solution <sup>γ</sup></td>
+<td style="text-align:center">−</td>
+<td style="text-align:right">1000 <i>μ</i>L</td>
+<td style="text-align:center">RNA bench</td>
+</tr>
+<tr>
+<td style="text-align:left">DNAse Ⅰ incubation mix <sup>δ</sup></td>
+<td style="text-align:center">−</td>
+<td style="text-align:right">80 <i>μ</i>L</td>
+<td style="text-align:center">fresh-prepared</td>
+</tr>
+<tr>
+<td style="text-align:left">Ethanol (EtOH)</td>
+<td style="text-align:center">≥ 96%</td>
+<td style="text-align:right">225 <i>μ</i>L</td>
+<td style="text-align:center">Ⅴ</td>
+</tr>
+<tr>
+<td style="text-align:left">RNase-free water</td>
+<td style="text-align:center">−</td>
+<td style="text-align:right">30 <i>μ</i>L</td>
+<td style="text-align:center">RNA bench</td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+<td style="text-align:right"></td>
+<td style="text-align:center"></td>
+</tr>
+</tbody>
+</table>
+<p><sup>α</sup> <strong>Buffer RLT mixture</strong>: Add 10 <i>μ</i>L <i>β</i>-mercaptoethanol ( <i>β</i>-ME ) to 1 mL Buffer RLT. The mixture can be stored at room temperature for up to 1 month. Buffer RLT contains a high concentration of guanidine isothiocycanate, which supports the binding of RNA to the silica membrane. The <i>β</i>-mercaptoethanol should be added to Buffer RLT to inactivate RNases.</p>
+<p><sup>β</sup> <strong>Buffer RW1</strong> contains a guanidine salt, as well as ethanol, and is used as a stringent washing buffer that efficiently removes biomolecules such as carbohydrates, proteins, fatty acids etc., that are non-specifically bound to the silica membrane. At the same time, RNA molecules larger than 200 bases remain bound to the column.</p>
+<p><sup>γ</sup> <strong>Buffer RPE working solution</strong>: Add 4 volumes of ≥ 96% ethanol to Buffer RPE. In this case, add 2000 μL ethanol to 500 μL Buffer RPE. It is a mild washing buffer for removing traces of salts, which are still on the column due to buffers used earlier in the protocol.</p>
+<p><sup>δ</sup> <strong>DNase Ⅰ incubation mix</strong>: Add <b style='color: olive'>10 μL DNase Ⅰ stock solution</b> to <b style='color: olive'>70 μL Buffer RDD</b>, mix by inverting the tube, and put on ice.</p>
+<blockquote>
+<ul>
+<li><strong>DNase Ⅰ stock solution</strong>: Located at 4°C (b). Dissolve the lyophilized DNase Ⅰ in 550 μL RNase-free water. To avoid loss of DNase Ⅰ, do not open the vial. Inject RNase-free water into the vial using an RNase-free needle and syringe. Mix gently by inverting the vial. Do not vortex. Store the stock solution as single use aliquots at −20°C (9 months) or 4°C (1 month). Do not refreeze after thawing.</li>
+<li><strong>Buffer RDD</strong>: Located at 4°C (b). It provides efficient on-column digestion of DNA and also ensures that the RNA remains bound to the column.</li>
+</ul>
+</blockquote>
+<div style='page-break-after: always;'></div>
+<h1 id="procedure">Procedure</h1>
+<p>All instruments must be sterilized prior to the experiment to ensure no RNA contamination and RNase residual.</p>
+<h2 id="step-1-cell-lysis"><strong>Step 1: Cell lysis</strong></h2>
+<ol>
+<li>
+<p>Put in 5 beads in each 2 mL microcentrifuge tube. Add <b style='color: darkorange'>450 μL Buffer RLT mixture</b> ( contains 1% <i>β</i>-ME ) into the eppendorf.</p>
+</li>
+<li>
+<p>Dissect ≤ 100 mg tissue and immediately submerge them into the Buffer RLT mixture.</p>
+</li>
+</ol>
+<blockquote>
+<ul>
+<li>The rice root tip weight is approximately: [ 17.7, 20.6, 19.7, 21.2, 22.3 ] mg cm<sup>-1</sup>/ 10 root-tips ≈ <b style='color: darkorange'>0.2 mg / mm</b>. So the maximum is 250 root tips ( cut 2 mm ).</li>
+<li>Put the tissue into an eppendorf, slightly centrifuge to spin down the tissue to the bottom of the eppendorf. If the tissue is not used immediately, store the sample at −80°C.</li>
+</ul>
+</blockquote>
+<ol start="3">
+<li>Disrupt the tissue using Tissue Grinder ( <b style='color:darkorange'>30 hits / sec</b>, <b style='color:darkorange'>10 mins</b> ).</li>
+</ol>
+<blockquote>
+<ul>
+<li>Place a thick layer of tissue paper between the tissue grinder adapter cover and the eppendorf tube caps to boost grinding efficiency and prevent the tube caps from popping open during high-speed reciprocal shaking.</li>
+</ul>
+</blockquote>
+<ol start="4">
+<li>
+<p>(optional) Water bath ( <b style='color: red'>56°C</b>, <b style='color: red'>1 ~ 3 mins</b> ). Help to disrupt the tissue and release RNA.</p>
+</li>
+<li>
+<p>Now we get the <b style='color: darkorange'>raw lysate</b>.</p>
+</li>
+</ol>
+<h2 id="step-2-collect-the-lysate-supernatant"><strong>Step 2: Collect the lysate supernatant</strong></h2>
+<ol>
+<li>Transfer the <b style='color: darkorange'>raw lysate</b> to a <b style='color: #896790'>QIAshredder spin column</b> ( purple lid ) placed in a <b>2 mL collection tube</b>. Centrifuge ( <b style='color: darkorange'>full speed</b>, <b style='color: darkorange'>2 mins</b> ).</li>
+</ol>
+<blockquote>
+<ul>
+<li>The QIAshredder spin column is used for removing cell debris and simultaneously homogenizes the lysate.</li>
+</ul>
+</blockquote>
+<ol start="2">
+<li>(optional) Transfer the supernatant to a <b style='color: purple'>gDNA Eliminator Mini Spin Column</b> (colorless, with purple O-ring) placed in a 2 mL collection tube (supplied). Centrifuge ( ≥ <b style='color: darkorange'>10,000 rpm</b> or 8000 × g, <b style='color: darkorange'>30 secs</b> ). Discard the column and save the flow-through.</li>
+</ol>
+<blockquote>
+<ul>
+<li>The gDNA Eliminator Mini Spin Column is the component of RNeasy® Plus Mini Kit. It is not sold separately.</li>
+</ul>
+</blockquote>
+<ol start="3">
+<li>
+<p>Transfer the supernatant of the flow-through to a new 1.5 mL microcentrifuge tube (not supplied) without disturbing the remaining cell-debris pellet.</p>
+</li>
+<li>
+<p>Add <b style='color: darkorange'>225 μL 96~100% ethanol</b> ( ≈ 0.5 volume ) to the cleared lysate, and <b style='color: darkorange'>mix well</b> immediately by pipetting. <i><b style='color: red'>DO NOT centrifuge</b></i>. Proceed to the next step immediately.</p>
+</li>
+</ol>
+<blockquote>
+<ul>
+<li>The volume of lysate may be less than 450 μL due to loss during homogenization.</li>
+<li>Precipitates may be visible after additon of ethanol. This does not affect the procedure.</li>
+</ul>
+</blockquote>
+<h2 id="step-3-bind-rna-to-column"><strong>Step 3: Bind RNA to column</strong></h2>
+<ol>
+<li>
+<p>Transfer the sample lysate ( usually 650 μL ), including any precipitate that may have formed, to an <b style='color: violet'>RNeasy spin column</b> ( pink lid ) placed in a 2 mL collection tube (supplied). Close the lid gently.</p>
+</li>
+<li>
+<p>Centrifuge ( ≥ <b style='color: darkorange'>10,000 rpm</b> or 8000 × g, <b style='color: darkorange'>15 secs</b> ). <b style='color: aqua'>Discard the flow-through</b>. Reuse the collection tube.</p>
+</li>
+</ol>
+<blockquote>
+<ul>
+<li>If the sample volume exceeds 700 μL, centrifuge successive aliquots in the same RNeasy spin column. Discard the flow-through after each centrifugation.</li>
+</ul>
+</blockquote>
+<h2 id="step-4-dna-digestion-optional"><strong>Step 4: DNA digestion (optional)</strong></h2>
+<ol>
+<li>
+<p>Add <b style='color: darkorange'>350 μL Buffer RW1</b> to the <b style='color: violet'>RNeasy spin column</b>. Close the lid gently.</p>
+</li>
+<li>
+<p>(optional) Incubate on benchtop ( 25°C, 3–5 mins ) before centrifuging to enhance removal of excess gDNA prior to applying the enzyme.</p>
+</li>
+<li>
+<p>Centrifuge ( ≥ <b style='color: darkorange'>10,000 rpm</b> or 8000 × g, <b style='color: darkorange'>15 secs</b> ) to wash the <b style='color: violet'>RNeasy spin column membrane</b>. <b style='color: aqua'>Discard the flow-through</b>. Reuse the collection tube.</p>
+</li>
+<li>
+<p>Add <b style='color: darkorange'>10 μL DNase Ⅰ</b> to <b style='color: darkorange'>70 μL Buffer RDD</b>. Mix well by gently inverting the tube. Centrifuge briefly to collect residual liquid from the sides of the tube.</p>
+</li>
+</ol>
+<blockquote>
+<ul>
+<li>DNase Ⅰ is especially sensitive to physical denaturation. Mixing should only be carried out by gently inverting the tube. Do not vortex.</li>
+</ul>
+</blockquote>
+<ol start="5">
+<li>Add the <b style='color: darkorange'>80 μL DNase Ⅰ incubation mix</b> directly to the <b style='color: violet'>RNeasy spin column membrane</b>, and place on the benchtop ( <b style='color: darkorange'>25 ± 5°C</b>, <b style='color: darkorange'>15 mins</b> ).</li>
+</ol>
+<blockquote>
+<ul>
+<li>Be sure to add the DNase Ⅰ incubation mix directly to the RNeasy spin column membrane. DNase digestion will be incomplete of part of the mix sticks to the walls or the O-ring of the spin column.</li>
+</ul>
+</blockquote>
+<h2 id="step-5-wash"><strong>Step 5: Wash</strong></h2>
+<ol>
+<li>
+<p>Add <b style='color: darkorange'>350 μL Buffer RW1</b> to the <b style='color: violet'>RNeasy spin column</b>. Close the lid gently. Centrifuge ( ≥ <b style='color: darkorange'>10,000 rpm</b> or 8000 × g, <b style='color: darkorange'>15 secs</b> ) to wash the spin column membrane. <b style='color: aqua'>Discard the flow-through</b>. Reuse the collection tube.</p>
+</li>
+<li>
+<p>Add <b style='color: darkorange'>500 μL Buffer RPE</b> to the <b style='color: violet'>RNeasy spin column</b>. Close the lid gently. Centrifuge ( ≥ <b style='color: darkorange'>10,000 rpm</b> or 8000 × g, <b style='color: darkorange'>15 secs</b> ) to wash the spin column membrane. <b style='color: aqua'>Discard the flow-through</b>. Reuse the collection tube.</p>
+</li>
+<li>
+<p>Add <b style='color: darkorange'>500 μL Buffer RPE</b> to the <b style='color: violet'>RNeasy spin column</b>. Close the lid gently. Centrifuge ( ≥ <b style='color: darkorange'>10,000 rpm</b> or 8000 × g, <b style='color: darkorange'>2 mins</b> ) to wash the spin column membrane. <b style='color: aquamarine'>Discard the collection tube with the flow-through</b>.</p>
+</li>
+</ol>
+<blockquote>
+<ul>
+<li>The long centrifugation dries the spin column membrane, ensuring that no ethanol is carried over during RNA elution. Residual ethanol may interfere with downstream reactions.</li>
+<li>After centrifugation, carefully remove the RNeasy spin column from the collection tube so that the column does not contact the flow-through. Otherwise, carryover of ethanol will occur.</li>
+</ul>
+</blockquote>
+<ol start="4">
+<li>Place the <b style='color: violet'>RNeasy spin column</b> in a <b style='color: darkorange'>new 2 mL collection tube</b> ( supplied ). Close the lid gently. Centrifuge ( <b style='color: darkorange'>full speed</b>, <b style='color: darkorange'>1 ~ 5 mins</b> ).</li>
+</ol>
+<blockquote>
+<ul>
+<li>Perform this step to eliminate any possible carryover of Buffer RPE, or if residual flow-through remains on the outside of the RNeasy spin column.</li>
+</ul>
+</blockquote>
+<h2 id="step-6-elute-rna"><strong>Step 6: Elute RNA</strong></h2>
+<ol>
+<li>
+<p>Place the <b style='color: violet'>RNeasy spin column</b> in a <b style='color: darkorange'>new 1.5 mL collection tube</b> ( supplied ).</p>
+</li>
+<li>
+<p>Add 30–50 μL RNase-free water directly to the spin column membrane. Close the lid gently.</p>
+</li>
+</ol>
+<blockquote>
+<ul>
+<li>To increase RNA yield, incubate the spin column on the bench for 10 mins ( optional ).</li>
+<li>If the expected RNA yield is &gt;30 μg, repeat the elution step using another 30–50 μL RNase-free water. That means, you will get 60–100 μL eluate.</li>
+</ul>
+</blockquote>
+<ol start="3">
+<li>Centrifuge ( ≥ <b style='color: darkorange'>10,000 rpm</b> or 8000 × g, <b style='color: darkorange'>1 min</b> ) to elute the RNA.</li>
+</ol>
+<blockquote>
+<ul>
+<li>If high RNA concentration is required, repeat the elution step using the eluate. The RNA yield will be 15–30% less than that obtained using a second volume of RNase-free water, but the final RNA concentration will be higher.</li>
+</ul>
+</blockquote>
+<ol start="4">
+<li>Store the RNA eluate at −20°C ( few weeks ) or −80°C ( &gt; 1 year ).</li>
+</ol>
+<p><br><hr><h2 style="text-align: center">Done !!!</h2><hr></p>
+<div style='page-break-after: always;'></div>
+</body>
+</html>
