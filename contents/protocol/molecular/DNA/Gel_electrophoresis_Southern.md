@@ -1,3 +1,23 @@
+<style>
+  /* 1. Style for inline code (text wrapped in single backticks `like this`) */
+  :not(pre) > code {
+    color: #0072B2 !important;            /* Dark text color for high contrast */
+    background-color: #f0f0f0 !important; /* Light gray background box */
+    padding: 2px 5px !important;
+    border-radius: 4px !important;
+    font-size: 0.9em !important;
+  }
+
+  /* 2. Style for multi-line code blocks (fenced with ```) */
+  pre code, pre code.hljs {
+    color: #0072B2 !important;            /* Dark text color for high contrast */
+    background-color: #f0f0f0 !important; /* Light gray background box */
+    display: block !important;
+    padding: 10px !important;
+    border-radius: 5px !important;
+  }
+</style>
+
 # **Gel electrophoresis (Southern)**
 
 Usage amount per slot:
@@ -18,6 +38,8 @@ Usage amount per slot:
 
 <sup>*</sup> To prepare 1000X SYBR stock solution, dilutes 100 &mu;L SYBR<sup>&reg;</sup> raw solution with 900 &mu;L DMSO. This chemical is used to stain the DNA and detected by UV radiation.
 
+<!-- <div style='page-break-after: always;'></div> -->
+
 # Procedure
 
 ## **Step 1: Make gel**
@@ -29,8 +51,6 @@ Usage amount per slot:
 
 > - For example, 40 mL gel requires 40 <i>&mu;</i>L 1000X SYBR stock solution.
 3. Pour the gel into the gel container and wait for solidification (around 15 mins);
-
-<div style='page-break-after: always;'></div>
 
 ## **Step 2: Set up the electrode machine**
 
@@ -51,7 +71,7 @@ and make sure the gel was fully submerged in the buffer;
 
 ## **Step 4: Start running**
 
-10. Set the voltage as <b>135 V</b> and the runtime as <b>40 mins</b>;
+1. Set the voltage as <b>135 V</b> and the runtime as <b>40 mins</b>;
 
 > - 5 ~ 10 V / cm for DNA size < 1 kb;  
 > - 4 ~ 10 V / cm for DNA size between 1 ~ 12 kb;  
@@ -77,3 +97,8 @@ and make sure the gel was fully submerged in the buffer;
 9. `Export for publication` ( Export for analysis is 16-bit images ).
 
 <br><hr><h2 style="text-align: center">Done !!!</h2><hr>
+
+<br>
+
+If you encounter any issues with the protocol, please report them at:  
+[https://github.com/P10911004-NPUST/jklai/issues](https://github.com/P10911004-NPUST/jklai/issues).

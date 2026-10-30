@@ -36,11 +36,11 @@ Buffer solutions usage per sample:
 
 2. Centrifuge at room temperature ( > 15000 rpm, 20 mins ) to bring down the remaining tissues; 
 
+<div style='page-break-after: always;'></div>
+
 ## **Step 3: Collect DNA supernatant**
 
 1. Carefully take the supernatant ( around 90% of the supernatant volume ) to a new 1.5 mL eppendorf;
-
-<div style='page-break-after: always;'></div>
 
 ## **Step 4: Precipitate DNA**
 
@@ -68,9 +68,11 @@ Buffer solutions usage per sample:
 
 > - Store the purified DNA at &minus;20&deg;C for up to 2 years. Avoid repeated freeze–thaw cycles and vigorous mixing.
 
+<br><hr><h2 style="text-align: center">Done !!!</h2><hr>
+
 <div style='page-break-after: always;'></div>
 
-## **Step 7: DNA quality assurance**
+# DNA quality assurance
 
 1. Check the DNA concentration and quality.
 
@@ -81,7 +83,7 @@ Buffer solutions usage per sample:
 - At least 10 ng / <i>&micro;</i>L for PCR
 - the diluted DNA should be used as soon as possible
 
-### Wavelength detection
+### **Wavelength detection**
 
 | Wavelength (nm) | Detected Compound                                                      |
 | :---:           | :---                                                                   |
@@ -97,8 +99,6 @@ Buffer solutions usage per sample:
 | DNA           | ~ 1.8         | > 2.0        | > 1.2        |
 | RNA           | ~ 2.0         | > 2.0        | > 1.2        |
 |||||
-
-<br><hr><h2 style="text-align: center">Done !!!</h2><hr>
 
 <div style='page-break-after: always;'></div>
 
@@ -157,3 +157,8 @@ Buffer solutions usage per sample:
 3. Adjust the volume to 1 L with ddH<sub>2</sub>O.
 
 4. Store at room temperature. Sterilization is not necessary. <b style='color:red'>DO NOT</b> autoclave.
+
+<br>
+
+If you encounter any issues with the protocol, please report them at:  
+[https://github.com/P10911004-NPUST/jklai/issues](https://github.com/P10911004-NPUST/jklai/issues).

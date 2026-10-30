@@ -22,10 +22,7 @@ Usage amount per sample:
 
 1. Prepare the total amount of the required working solution ( F-primer, R-primer, 2X-Taq );
 
-> - For example, if we had 10 samples, then me make the working solution by adding 
-> 4 &mu;L <b style="color:orange">F-primer</b>, 
-> 4 &mu;L <b style="color:orange">R-primer</b>, 
-> and 50 &mu;L <b style="color:orange">2X-Taq</b> into a new 200 &mu;L PCR tube.
+- For example, if we had 10 samples, then me make the working solution by adding 4 &mu;L <b style="color:darkorange">F-primer</b>, 4 &mu;L <b style="color:darkorange">R-primer</b>, and 50 &mu;L <b style="color:darkorange">2X-Taq</b> into a new 200 &mu;L PCR tube.
 
 2. Dispense the working solution into a new 200 <i>&mu;</i>L PCR tubes ( 5.8 &mu;L for each sample );
 
@@ -52,3 +49,8 @@ Usage amount per sample:
 <sup>&dagger;</sup> Annealing temperature depends on primers.
 
 <br><hr><h2 style="text-align: center">Done !!!</h2><hr>
+
+<br>
+
+If you encounter any issues with the protocol, please report them at:  
+[https://github.com/P10911004-NPUST/jklai/issues](https://github.com/P10911004-NPUST/jklai/issues).

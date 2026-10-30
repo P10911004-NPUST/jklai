@@ -235,67 +235,115 @@ pre code.hljs {
 code.hljs {
   padding: 3px 5px
 }
-/*
-Monokai style - ported by Luigi Maselli - http://grigio.org
+/*!
+  Theme: GitHub Dark
+  Description: Dark theme as seen on github.com
+  Author: github.com
+  Maintainer: @Hirse
+  Updated: 2021-05-15
+
+  Outdated base version: https://github.com/primer/github-syntax-dark
+  Current colors taken from GitHub's CSS
 */
 .hljs {
-  background: #272822;
-  color: #ddd
+  color: #c9d1d9;
+  background: #0d1117
 }
-.hljs-tag,
+.hljs-doctag,
 .hljs-keyword,
-.hljs-selector-tag,
-.hljs-literal,
-.hljs-strong,
-.hljs-number,
-.hljs-name {
-  color: #f92672
-}
-.hljs-code {
-  color: #66d9ef
-}
-.hljs-attribute,
-.hljs-attr,
-.hljs-symbol,
-.hljs-regexp,
-.hljs-link {
-  color: #bf79db
-}
-.hljs-string,
-.hljs-bullet,
-.hljs-subst,
-.hljs-title,
-.hljs-section,
-.hljs-emphasis,
-.hljs-type,
-.hljs-built_in,
-.hljs-selector-attr,
-.hljs-selector-pseudo,
-.hljs-addition,
-.hljs-variable,
+.hljs-meta .hljs-keyword,
 .hljs-template-tag,
-.hljs-template-variable {
-  color: #a6e22e
+.hljs-template-variable,
+.hljs-type,
+.hljs-variable.language_ {
+  /* prettylights-syntax-keyword */
+  color: #ff7b72
 }
+.hljs-title,
 .hljs-title.class_,
-.hljs-class .hljs-title {
-  color: white
+.hljs-title.class_.inherited__,
+.hljs-title.function_ {
+  /* prettylights-syntax-entity */
+  color: #d2a8ff
+}
+.hljs-attr,
+.hljs-attribute,
+.hljs-literal,
+.hljs-meta,
+.hljs-number,
+.hljs-operator,
+.hljs-variable,
+.hljs-selector-attr,
+.hljs-selector-class,
+.hljs-selector-id {
+  /* prettylights-syntax-constant */
+  color: #79c0ff
+}
+.hljs-regexp,
+.hljs-string,
+.hljs-meta .hljs-string {
+  /* prettylights-syntax-string */
+  color: #a5d6ff
+}
+.hljs-built_in,
+.hljs-symbol {
+  /* prettylights-syntax-variable */
+  color: #ffa657
 }
 .hljs-comment,
-.hljs-quote,
-.hljs-deletion,
-.hljs-meta {
-  color: #75715e
+.hljs-code,
+.hljs-formula {
+  /* prettylights-syntax-comment */
+  color: #8b949e
 }
-.hljs-keyword,
+.hljs-name,
+.hljs-quote,
 .hljs-selector-tag,
-.hljs-literal,
-.hljs-doctag,
-.hljs-title,
-.hljs-section,
-.hljs-type,
-.hljs-selector-id {
+.hljs-selector-pseudo {
+  /* prettylights-syntax-entity-tag */
+  color: #7ee787
+}
+.hljs-subst {
+  /* prettylights-syntax-storage-modifier-import */
+  color: #c9d1d9
+}
+.hljs-section {
+  /* prettylights-syntax-markup-heading */
+  color: #1f6feb;
   font-weight: bold
+}
+.hljs-bullet {
+  /* prettylights-syntax-markup-list */
+  color: #f2cc60
+}
+.hljs-emphasis {
+  /* prettylights-syntax-markup-italic */
+  color: #c9d1d9;
+  font-style: italic
+}
+.hljs-strong {
+  /* prettylights-syntax-markup-bold */
+  color: #c9d1d9;
+  font-weight: bold
+}
+.hljs-addition {
+  /* prettylights-syntax-markup-inserted */
+  color: #aff5b4;
+  background-color: #033a16
+}
+.hljs-deletion {
+  /* prettylights-syntax-markup-deleted */
+  color: #ffdcd7;
+  background-color: #67060c
+}
+.hljs-char.escape_,
+.hljs-link,
+.hljs-params,
+.hljs-property,
+.hljs-punctuation,
+.hljs-tag {
+  /* purposely ignored */
+  
 }
 </style>
 
@@ -350,7 +398,7 @@ code {
 }
 
 </style>
-<link rel="stylesheet" href="file://C:\\jklai\\github\\rice_heat-stress\\markdown\\markdown-style.css" type="text/css"><link rel="stylesheet" href="file://C:\\jklai\\project\\rice_heat-stress\\markdown\\markdown-style.css" type="text/css">
+
 <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
 </head>
 <body>
@@ -420,14 +468,9 @@ code {
 <ol>
 <li>Prepare the total amount of the required working solution ( F-primer, R-primer, 2X-Taq );</li>
 </ol>
-<blockquote>
 <ul>
-<li>For example, if we had 10 samples, then me make the working solution by adding<br>
-4 μL <b style="color:orange">F-primer</b>,<br>
-4 μL <b style="color:orange">R-primer</b>,<br>
-and 50 μL <b style="color:orange">2X-Taq</b> into a new 200 μL PCR tube.</li>
+<li>For example, if we had 10 samples, then me make the working solution by adding 4 μL <b style="color:darkorange">F-primer</b>, 4 μL <b style="color:darkorange">R-primer</b>, and 50 μL <b style="color:darkorange">2X-Taq</b> into a new 200 μL PCR tube.</li>
 </ul>
-</blockquote>
 <ol start="2">
 <li>
 <p>Dispense the working solution into a new 200 <i>μ</i>L PCR tubes ( 5.8 μL for each sample );</p>
@@ -502,6 +545,9 @@ and 50 μL <b style="color:orange">2X-Taq</b> into a new 200 μL PCR tube.</li>
 </table>
 <p><sup>†</sup> Annealing temperature depends on primers.</p>
 <p><br><hr><h2 style="text-align: center">Done !!!</h2><hr></p>
+<br>
+<p>If you encounter any issues with the protocol, please report them at:<br>
+<a href="https://github.com/P10911004-NPUST/jklai/issues">https://github.com/P10911004-NPUST/jklai/issues</a>.</p>
 
 </body>
 </html>

@@ -235,67 +235,115 @@ pre code.hljs {
 code.hljs {
   padding: 3px 5px
 }
-/*
-Monokai style - ported by Luigi Maselli - http://grigio.org
+/*!
+  Theme: GitHub Dark
+  Description: Dark theme as seen on github.com
+  Author: github.com
+  Maintainer: @Hirse
+  Updated: 2021-05-15
+
+  Outdated base version: https://github.com/primer/github-syntax-dark
+  Current colors taken from GitHub's CSS
 */
 .hljs {
-  background: #272822;
-  color: #ddd
+  color: #c9d1d9;
+  background: #0d1117
 }
-.hljs-tag,
+.hljs-doctag,
 .hljs-keyword,
-.hljs-selector-tag,
-.hljs-literal,
-.hljs-strong,
-.hljs-number,
-.hljs-name {
-  color: #f92672
-}
-.hljs-code {
-  color: #66d9ef
-}
-.hljs-attribute,
-.hljs-attr,
-.hljs-symbol,
-.hljs-regexp,
-.hljs-link {
-  color: #bf79db
-}
-.hljs-string,
-.hljs-bullet,
-.hljs-subst,
-.hljs-title,
-.hljs-section,
-.hljs-emphasis,
-.hljs-type,
-.hljs-built_in,
-.hljs-selector-attr,
-.hljs-selector-pseudo,
-.hljs-addition,
-.hljs-variable,
+.hljs-meta .hljs-keyword,
 .hljs-template-tag,
-.hljs-template-variable {
-  color: #a6e22e
+.hljs-template-variable,
+.hljs-type,
+.hljs-variable.language_ {
+  /* prettylights-syntax-keyword */
+  color: #ff7b72
 }
+.hljs-title,
 .hljs-title.class_,
-.hljs-class .hljs-title {
-  color: white
+.hljs-title.class_.inherited__,
+.hljs-title.function_ {
+  /* prettylights-syntax-entity */
+  color: #d2a8ff
+}
+.hljs-attr,
+.hljs-attribute,
+.hljs-literal,
+.hljs-meta,
+.hljs-number,
+.hljs-operator,
+.hljs-variable,
+.hljs-selector-attr,
+.hljs-selector-class,
+.hljs-selector-id {
+  /* prettylights-syntax-constant */
+  color: #79c0ff
+}
+.hljs-regexp,
+.hljs-string,
+.hljs-meta .hljs-string {
+  /* prettylights-syntax-string */
+  color: #a5d6ff
+}
+.hljs-built_in,
+.hljs-symbol {
+  /* prettylights-syntax-variable */
+  color: #ffa657
 }
 .hljs-comment,
-.hljs-quote,
-.hljs-deletion,
-.hljs-meta {
-  color: #75715e
+.hljs-code,
+.hljs-formula {
+  /* prettylights-syntax-comment */
+  color: #8b949e
 }
-.hljs-keyword,
+.hljs-name,
+.hljs-quote,
 .hljs-selector-tag,
-.hljs-literal,
-.hljs-doctag,
-.hljs-title,
-.hljs-section,
-.hljs-type,
-.hljs-selector-id {
+.hljs-selector-pseudo {
+  /* prettylights-syntax-entity-tag */
+  color: #7ee787
+}
+.hljs-subst {
+  /* prettylights-syntax-storage-modifier-import */
+  color: #c9d1d9
+}
+.hljs-section {
+  /* prettylights-syntax-markup-heading */
+  color: #1f6feb;
   font-weight: bold
+}
+.hljs-bullet {
+  /* prettylights-syntax-markup-list */
+  color: #f2cc60
+}
+.hljs-emphasis {
+  /* prettylights-syntax-markup-italic */
+  color: #c9d1d9;
+  font-style: italic
+}
+.hljs-strong {
+  /* prettylights-syntax-markup-bold */
+  color: #c9d1d9;
+  font-weight: bold
+}
+.hljs-addition {
+  /* prettylights-syntax-markup-inserted */
+  color: #aff5b4;
+  background-color: #033a16
+}
+.hljs-deletion {
+  /* prettylights-syntax-markup-deleted */
+  color: #ffdcd7;
+  background-color: #67060c
+}
+.hljs-char.escape_,
+.hljs-link,
+.hljs-params,
+.hljs-property,
+.hljs-punctuation,
+.hljs-tag {
+  /* purposely ignored */
+  
 }
 </style>
 
@@ -350,7 +398,7 @@ code {
 }
 
 </style>
-<link rel="stylesheet" href="file://C:\\jklai\\github\\rice_heat-stress\\markdown\\markdown-style.css" type="text/css"><link rel="stylesheet" href="file://C:\\jklai\\project\\rice_heat-stress\\markdown\\markdown-style.css" type="text/css">
+
 <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
 </head>
 <body>
@@ -362,6 +410,25 @@ code {
           : 'default'
     });
   </script>
+<style>
+  /* 1. Style for inline code (text wrapped in single backticks `like this`) */
+  :not(pre) > code {
+    color: #0072B2 !important;            /* Dark text color for high contrast */
+    background-color: #f0f0f0 !important; /* Light gray background box */
+    padding: 2px 5px !important;
+    border-radius: 4px !important;
+    font-size: 0.9em !important;
+  }
+
+  /* 2. Style for multi-line code blocks (fenced with ```) */
+  pre code, pre code.hljs {
+    color: #0072B2 !important;            /* Dark text color for high contrast */
+    background-color: #f0f0f0 !important; /* Light gray background box */
+    display: block !important;
+    padding: 10px !important;
+    border-radius: 5px !important;
+  }
+</style>
 <h1 id="gel-electrophoresis-southern"><strong>Gel electrophoresis (Southern)</strong></h1>
 <p>Usage amount per slot:</p>
 <table>
@@ -421,6 +488,7 @@ code {
 <p><sup>※</sup> To prepare the 0.5X TAE buffer, make at least 1 L, as each run requires at least 500 mL 0.5X TAE buffer.</p>
 <p><sup>†</sup> The big gel slot requires around 40 mL gel solution; the small gel slot requires 20 mL gel solution. For example, to make a 3% big gel, add 1.2 g agarose powder (ultra pure grade) to 40 mL 0.5X TAE buffer.</p>
 <p><sup>*</sup> To prepare 1000X SYBR stock solution, dilutes 100 μL SYBR<sup>®</sup> raw solution with 900 μL DMSO. This chemical is used to stain the DNA and detected by UV radiation.</p>
+<!-- <div style='page-break-after: always;'></div> -->
 <h1 id="procedure">Procedure</h1>
 <h2 id="step-1-make-gel"><strong>Step 1: Make gel</strong></h2>
 <ol>
@@ -442,7 +510,6 @@ code {
 <ol start="3">
 <li>Pour the gel into the gel container and wait for solidification (around 15 mins);</li>
 </ol>
-<div style='page-break-after: always;'></div>
 <h2 id="step-2-set-up-the-electrode-machine"><strong>Step 2: Set up the electrode machine</strong></h2>
 <ol>
 <li>
@@ -452,7 +519,7 @@ code {
 <p>After the gel was solidified, put the gel container together with the gel into the elctrophoresis machine;</p>
 </li>
 <li>
-<p>Add some TAE buffer (same strength with the gel; 0.5X in this case) into the electropheresis machine<br>
+<p>Add some TAE buffer (same strength with the gel; 0.5X in this case) into the electropheresis machine
 and make sure the gel was fully submerged in the buffer;</p>
 </li>
 </ol>
@@ -469,7 +536,7 @@ and make sure the gel was fully submerged in the buffer;</p>
 </li>
 </ol>
 <h2 id="step-4-start-running"><strong>Step 4: Start running</strong></h2>
-<ol start="10">
+<ol>
 <li>Set the voltage as <b>135 V</b> and the runtime as <b>40 mins</b>;</li>
 </ol>
 <blockquote>
@@ -508,6 +575,9 @@ and make sure the gel was fully submerged in the buffer;</p>
 </li>
 </ol>
 <p><br><hr><h2 style="text-align: center">Done !!!</h2><hr></p>
+<br>
+<p>If you encounter any issues with the protocol, please report them at:<br>
+<a href="https://github.com/P10911004-NPUST/jklai/issues">https://github.com/P10911004-NPUST/jklai/issues</a>.</p>
 
 </body>
 </html>
