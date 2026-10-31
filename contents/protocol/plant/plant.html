@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<!-- <html lang="zh-TW"> -->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/ico" href="../../../assets/selfie_01.ico">
+  <title>Protocol - Plant cultivation | 賴俊傑 (JK)</title>
+
+  <!-- Google Analytics 4 -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+
+  <script>
+    (function() {
+      const saved = localStorage.getItem('theme');
+      if (saved === 'light') {
+        document.documentElement.classList.add('light');
+      } else {
+        document.documentElement.classList.remove('light');
+      }
+    })();
+    function toggleTheme() {
+      const html = document.documentElement;
+      const isLight = html.classList.toggle('light');
+      localStorage.setItem('theme', isLight ? 'light' : 'dark');
+    }
+  </script>
+
+  <style>
+    /* ========== 深色模式（預設）========== */
+    :root {
+      --bg: #0f0f12;
+      --bg-card: #1a1a1f;
+      --bg-hover: #22222a;
+      --text: #e0e0e5;
+      --text-muted: #888899;
+      --text-dim: #666677;
+      --border: #2a2a35;
+      --border-hover: #3a3a4a;
+      --accent: #c0c0d0;
+      --link: #a0a0b8;
+      --link-hover: #e0e0f0;
+      --shadow: rgba(0,0,0,0.4);
+      --shadow-hover: rgba(0,0,0,0.6);
+    }
+    /* ========== 淺色模式 ========== */
+    :root.light {
+      --bg: #fafafa;
+      --bg-card: #ffffff;
+      --bg-hover: #f5f5f7;
+      --text: #2c2c2c;
+      --text-muted: #888899;
+      --text-dim: #9999aa;
+      --border: #e0e0e8;
+      --border-hover: #c8c8d8;
+      --accent: #1a1a2e;
+      --link: #555566;
+      --link-hover: #1a1a2e;
+      --shadow: rgba(0,0,0,0.06);
+      --shadow-hover: rgba(0,0,0,0.12);
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Georgia', 'Times New Roman', serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      min-height: 100vh;
+      transition: background 0.4s, color 0.4s;
+    }
+    .container {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 40px 24px;
+    }
+
+    /* ===== 導航欄 ===== */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 35px;
+      border-bottom: 2px solid var(--border);
+      padding-bottom: 20px;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .logo {
+      font-size: 1.4rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      color: var(--accent);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+    .logo:hover { color: var(--link-hover); }
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+    .nav-links {
+      display: flex;
+      gap: 22px;
+    }
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text-dim);
+      font-size: 0.88rem;
+      letter-spacing: 0.4px;
+      transition: color 0.3s;
+      white-space: nowrap;
+    }
+    .nav-links a:hover, .nav-links a.active {
+      color: var(--text);
+    }
+
+    /* ===== 主題切換按鈕 ===== */
+    .theme-toggle {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 6px 14px;
+      cursor: pointer;
+      color: var(--text-dim);
+      font-size: 0.85rem;
+      font-family: inherit;
+      transition: all 0.3s;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .theme-toggle:hover {
+      border-color: var(--border-hover);
+      color: var(--text);
+    }
+
+    /* ===== 頁尾 ===== */
+    footer {
+      text-align: center;
+      margin-top: 80px;
+      padding-top: 30px;
+      border-top: 1px solid var(--border);
+      color: var(--text-dim);
+      font-size: 0.8rem;
+    }
+
+    /* ===== 內文通用 ===== */
+    h1 {
+      font-size: 2.2rem;
+      font-weight: 400;
+      color: var(--accent);
+      margin-bottom: 24px;
+      letter-spacing: -0.3px;
+      transition: color 0.4s;
+    }
+    h2 {
+      font-size: 1.3rem;
+      font-weight: 500;
+      color: var(--accent);
+      margin: 36px 0 14px 0;
+      letter-spacing: 0.3px;
+      transition: color 0.4s;
+    }
+    h3 {
+      font-size: 1.05rem;
+      font-weight: 500;
+      color: var(--text);
+      margin: 22px 0 8px 0;
+    }
+    p { margin-bottom: 14px; color: var(--text-muted); transition: color 0.4s; }
+    a { color: var(--link); transition: color 0.2s; }
+    a:hover { color: var(--link-hover); }
+    ul { margin-left: 22px; margin-bottom: 14px; color: var(--text-muted); }
+    ol { margin-left: 22px; margin-bottom: 14px; color: var(--text-muted); }
+    li { margin-bottom: 8px; color: var(--text-muted); transition: color 0.4s; }
+    .muted { color: var(--text-dim); font-size: 0.9rem; }
+    .divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 32px 0;
+      transition: border-color 0.4s;
+    }
+
+    .back-to-top {
+      position: fixed;
+      right: 10px;
+      bottom: 24px;
+      z-index: 999;
+      padding: 11px 15px;
+      color: var(--text);
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      box-shadow: 0 6px 20px var(--shadow);
+      cursor: pointer;
+    }
+
+    /* ===== 卡片通用 ===== */
+    .card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 28px;
+      margin-bottom: 18px;
+      transition: all 0.3s;
+    }
+    .card:hover {
+      border-color: var(--border-hover);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px var(--shadow-hover);
+    }
+
+    /* ===== 響應式 ===== */
+    @media (max-width: 640px) {
+      .container { padding: 24px 16px; }
+      nav { flex-direction: column; align-items: flex-start; }
+      .nav-right { width: 100%; justify-content: space-between; }
+      .nav-links { gap: 14px; }
+      h1 { font-size: 1.7rem; }
+    }
+  </style>
+
+</head>
+<body>
+  <div class="container">
+    <nav>
+      <a href="../../../index.html" class="logo">🏠</a>
+      <div class="nav-right">
+        <div class="nav-links">
+          <a href="../../about/about.html">About</a>
+          <a href="../../publication/publication.html">Publication</a>
+          <a href="../../software/software.html">Software</a>
+          <a href="../../protocol/protocol.html" class="active">Protocol</a>
+        </div>
+        <button class="theme-toggle" onclick="toggleTheme()" title="明暗界面切換"><span>💡</span></button>
+      </div>
+    </nav>
+
+    <h1>🌱 Plant cultivation</h1>
+
+    <br>
+
+    <!-- 入口卡片 -->
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px;">
+
+      <!-- Rice -->
+      <a href="./Rice/rice.html" style="text-decoration:none; background:var(--bg-card); border:1px solid var(--border); border-radius:12px; padding:32px 18px; text-align:center; transition:all 0.3s; box-shadow:0 2px 8px var(--shadow);"
+         onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='0 12px 32px var(--shadow-hover)'; this.style.borderColor='var(--border-hover)';"
+         onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px var(--shadow)'; this.style.borderColor='var(--border)';">
+        <div style="font-size:2rem; margin-bottom:10px;">
+            <img src="./Rice/rice.png" style="height: 2em; width: auto; vertical-align: -0.15em;">
+        </div>
+        <h2 style="margin:0 0 4px 0; font-size:1.1rem; color:var(--accent);">Rice</h2>
+        <p style="margin:0; color:var(--text-dim); font-size:0.8rem;"><i>Oryza sativa</i></p>
+      </a>
+
+      
+
+    </div>
+
+    <button class="back-to-top" type="button" aria-label="回到頁面頂部" onclick="window.scrollTo({ top: 0, behavior: 'smooth' })">
+      <span aria-hidden="true">☝️ 回到頂部</span>
+    </button>
+
+    <footer>
+      <p>&copy; 2026 Lai Joon Keat. All rights reserved.</p>
+    </footer>
+  </div>
+</body>
+</html>
