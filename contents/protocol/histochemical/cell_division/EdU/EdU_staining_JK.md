@@ -230,7 +230,7 @@ The 1X solution could be stored at 2 ~ 6&deg;C for 6 months.
 
 <figure style="text-align: left; margin: 0;">
     <img src="./EdU_problem.png" style="width: 100%; max-width: 600px; display: block; background-color: black" />
-    <figcaption style="margin-top: 8px;">Figure 1. Example of EdU incomplete stained (left panel) and autofluorescence background (right panel).</figcaption>
+    <figcaption style="margin-top: 8px;">Figure 1. Example of EdU autofluorescence background (left panel) and incomplete stained (right panel).</figcaption>
     <br>
     <img src="./EdU_illus.png" style="width: 100%; max-width: 600px; display: block; background-color: black" />
     <figcaption style="margin-top: 8px;">Figure 2. Example of normal EdU signal.</figcaption>
