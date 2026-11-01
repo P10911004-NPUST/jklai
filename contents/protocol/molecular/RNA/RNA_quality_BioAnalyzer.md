@@ -57,7 +57,7 @@ One set of Gel-Dye Mix is for one chip ( 12 wells ).
 
 3. Keep the lid opened for <b style='color: darkorange'>1 min</b> to <b style='color: darkorange'>air-dry</b> the electrode.
 
-## During this period, switch on PC and execute the `2100 Expert` software
+<div style='border-left: 5px solid purple; padding: 10px 0 10px 20px; font-size: 1.1em;'>During this period, switch on the PC and execute the <code style='color: purple'>2100 Expert</code> software.</div>
 
 ## **Step 3: Load <b style='color: #40B5AD'>Gel-Dye Mix</b>**
 
@@ -122,6 +122,9 @@ One set of Gel-Dye Mix is for one chip ( 12 wells ).
 > - Quick look at RIN value, `Data` &rarr; `Chip summary`
 > - Quick look at RNA concentration, `Data` &rarr; `Electropherogram`
 
-<br><hr><h2 style="text-align: center">Done !!!</h2><hr>
+<hr><h2 style="text-align: center">Done !!!</h2><hr>
 
-<div style='page-break-after: always;'></div>
+<br>
+
+If you encounter any issues with the protocol, please report them at:  
+[https://github.com/P10911004-NPUST/jklai/issues](https://github.com/P10911004-NPUST/jklai/issues).

@@ -227,75 +227,78 @@ pre code {
 </style>
 
 <style>
-pre code.hljs {
-  display: block;
-  overflow-x: auto;
-  padding: 1em
-}
-code.hljs {
-  padding: 3px 5px
-}
-/*
-Monokai style - ported by Luigi Maselli - http://grigio.org
-*/
-.hljs {
-  background: #272822;
-  color: #ddd
-}
-.hljs-tag,
-.hljs-keyword,
-.hljs-selector-tag,
-.hljs-literal,
-.hljs-strong,
-.hljs-number,
-.hljs-name {
-  color: #f92672
-}
-.hljs-code {
-  color: #66d9ef
-}
-.hljs-attribute,
-.hljs-attr,
-.hljs-symbol,
-.hljs-regexp,
-.hljs-link {
-  color: #bf79db
-}
-.hljs-string,
-.hljs-bullet,
-.hljs-subst,
-.hljs-title,
-.hljs-section,
-.hljs-emphasis,
-.hljs-type,
-.hljs-built_in,
-.hljs-selector-attr,
-.hljs-selector-pseudo,
-.hljs-addition,
-.hljs-variable,
-.hljs-template-tag,
-.hljs-template-variable {
-  color: #a6e22e
-}
-.hljs-title.class_,
-.hljs-class .hljs-title {
-  color: white
-}
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
 .hljs-comment,
-.hljs-quote,
-.hljs-deletion,
-.hljs-meta {
-  color: #75715e
+.hljs-quote {
+	color: #8e908c;
 }
-.hljs-keyword,
-.hljs-selector-tag,
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
 .hljs-literal,
-.hljs-doctag,
-.hljs-title,
-.hljs-section,
 .hljs-type,
-.hljs-selector-id {
-  font-weight: bold
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
 }
 </style>
 
@@ -350,7 +353,7 @@ code {
 }
 
 </style>
-<link rel="stylesheet" href="file://C:\\jklai\\github\\rice_heat-stress\\markdown\\markdown-style.css" type="text/css"><link rel="stylesheet" href="file://C:\\jklai\\project\\rice_heat-stress\\markdown\\markdown-style.css" type="text/css">
+
 <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
 </head>
 <body>
@@ -365,6 +368,7 @@ code {
 <h1 id="rna-extraction---1-μg-"><b>RNA extraction ( ≤ 1 <i>μ</i>g )</b></h1>
 <h3 id="rneasy-micro-kit--manual-"><a href='https://www.qiagen.com/tw/products/discovery-and-translational-research/dna-rna-purification/rna-purification/total-rna/rneasy-kits'>RNeasy® Micro Kit</a> ( <a href='https://www.qiagen.com/en-US/resources/download/KitHandbook/hb-1920-003-hb-rneasy-micro-0321-ww'>Manual</a> )</h3>
 <h1 id="preparation">Preparation</h1>
+<p>Usage amount per sample:</p>
 <table>
 <thead>
 <tr>
@@ -376,76 +380,70 @@ code {
 </thead>
 <tbody>
 <tr>
-<td style="text-align:left">Buffer RLT mixture <sup>1</sup></td>
+<td style="text-align:left"><i>β</i>-mercaptoethanol ( <i>β</i>-ME )</td>
 <td style="text-align:center">−</td>
-<td style="text-align:right">1010 µL</td>
+<td style="text-align:right">3.5 μL</td>
+<td style="text-align:center">Toxic (b)</td>
+</tr>
+<tr>
+<td style="text-align:left">Buffer RLT mixture <sup>α</sup></td>
+<td style="text-align:center">−</td>
+<td style="text-align:right">350 μL</td>
 <td style="text-align:center">RNA bench</td>
 </tr>
 <tr>
-<td style="text-align:left">Buffer RPE mixture <sup>2</sup></td>
+<td style="text-align:left">Buffer RPE mixture <sup>β</sup></td>
 <td style="text-align:center">−</td>
-<td style="text-align:right">2500 µL</td>
+<td style="text-align:right">500 μL</td>
 <td style="text-align:center">RNA bench</td>
 </tr>
 <tr>
 <td style="text-align:left">Buffer RW1</td>
 <td style="text-align:center">−</td>
-<td style="text-align:right">700 µL</td>
+<td style="text-align:right">700 μL</td>
 <td style="text-align:center">RNA bench</td>
 </tr>
 <tr>
 <td style="text-align:left">Buffer RDD</td>
 <td style="text-align:center">−</td>
-<td style="text-align:right">70 µL</td>
-<td style="text-align:center">RNA bench</td>
-</tr>
-<tr>
-<td style="text-align:left">DNAse I stock solution <sup>3</sup></td>
-<td style="text-align:center">−</td>
-<td style="text-align:right">10 µL</td>
+<td style="text-align:right">70 μL</td>
 <td style="text-align:center">4°C (b)</td>
 </tr>
 <tr>
-<td style="text-align:left">DNAse I incubation mix <sup>4</sup></td>
+<td style="text-align:left">DNAse I stock solution <sup>γ</sup></td>
 <td style="text-align:center">−</td>
-<td style="text-align:right">80 µL</td>
+<td style="text-align:right">10 μL</td>
+<td style="text-align:center">4°C (b)</td>
+</tr>
+<tr>
+<td style="text-align:left">DNAse I incubation mix <sup>δ</sup></td>
+<td style="text-align:center">−</td>
+<td style="text-align:right">80 μL</td>
 <td style="text-align:center">fresh-prepared</td>
 </tr>
 <tr>
 <td style="text-align:left">Ethanol (EtOH)</td>
-<td style="text-align:center">≥ 96%</td>
-<td style="text-align:right">≥ 2000 µL</td>
-<td style="text-align:center"></td>
+<td style="text-align:center">100%</td>
+<td style="text-align:right">—</td>
+<td style="text-align:center">Ⅴ</td>
 </tr>
 <tr>
 <td style="text-align:left">Ethanol (EtOH)</td>
 <td style="text-align:center">80%</td>
-<td style="text-align:right">≥ 500 µL</td>
-<td style="text-align:center"></td>
+<td style="text-align:right">500 μL</td>
+<td style="text-align:center">fresh-prepared</td>
 </tr>
 <tr>
 <td style="text-align:left">Ethanol (EtOH)</td>
 <td style="text-align:center">70%</td>
-<td style="text-align:right">≥ 350 µL</td>
-<td style="text-align:center"></td>
+<td style="text-align:right">350 μL</td>
+<td style="text-align:center">fresh-prepared</td>
 </tr>
 <tr>
 <td style="text-align:left">RNase-free water</td>
 <td style="text-align:center">−</td>
-<td style="text-align:right">≥ 600 µL</td>
-<td style="text-align:center"></td>
-</tr>
-<tr>
-<td style="text-align:left">Ice</td>
-<td style="text-align:center">−</td>
-<td style="text-align:right">1 vial</td>
-<td style="text-align:center"></td>
-</tr>
-<tr>
-<td style="text-align:left">Liquid nitrogen</td>
-<td style="text-align:center">−</td>
-<td style="text-align:right">1 vial</td>
-<td style="text-align:center"></td>
+<td style="text-align:right">14 μL</td>
+<td style="text-align:center">RNA bench</td>
 </tr>
 <tr>
 <td style="text-align:left"></td>
@@ -455,13 +453,28 @@ code {
 </tr>
 </tbody>
 </table>
-<p><sup>1</sup> <strong>Buffer RLT mixture</strong>: Add 10 <i>µ</i>L <i>β</i>-mercaptoethanol ( <i>β</i>-ME ) to 1 mL Buffer RLT. The mixture can be stored at room temperature for up to 1 month.</p>
-<p><sup>2</sup> <strong>Buffer RPE working solution</strong>: Add 4 volumes of ≥ 96% ethanol to Buffer RPE. In this case, add 2000 µL ethanol to 500 µL Buffer RPE.</p>
-<p><sup>3</sup> <strong>DNase I stock solution</strong>: Dissolve the lyophilized DNase I in 550 µL RNase-free water. To avoid loss of DNase I, do not open the vial. Inject RNase-free water into the vial using an RNase-free needle and syringe. Mix gently by inverting the vial. Do not vortex. Store the stock solution as single use aliquots at -20°C (9 months) or 2-8°C (1 month). Do not refreeze after thawing. Located at 4°C, b cabinet.</p>
-<p><sup>4</sup> <strong>DNase I incubation mix</strong>: Add 10 µL DNase I stock solution to 70 µL Buffer RDD, mix by inverting the tube, and put on ice.</p>
-<div style='page-break-after: always;'></div>
+<div style='font-size: 1em; text-align: justify;'>
+  <sup>&alpha;</sup> <b>Buffer RLT mixture</b>: Add 10 <i>&mu;</i>L <i>&beta;</i>-mercaptoethanol ( <i>&beta;</i>-ME ) to 1 mL Buffer RLT. The mixture can be stored at room temperature for up to 1 month. Buffer RLT contains a high concentration of guanidine isothiocycanate, which supports the binding of RNA to the silica membrane. The <i>&beta;</i>-mercaptoethanol should be added to Buffer RLT to inactivate RNases.
+  <br>
+  <sup>&beta;</sup> <b>Buffer RW1</b> contains a guanidine salt, as well as ethanol, and is used as a stringent washing buffer that efficiently removes biomolecules such as carbohydrates, proteins, fatty acids etc., that are non-specifically bound to the silica membrane. At the same time, RNA molecules larger than 200 bases remain bound to the column.
+  <br>
+  <sup>&gamma;</sup> <b>Buffer RPE working solution</b>: Add 4 volumes of &geq; 96% ethanol to Buffer RPE. In this case, add 2000 &mu;L ethanol to 500 &mu;L Buffer RPE. It is a mild washing buffer for removing traces of salts, which are still on the column due to buffers used earlier in the protocol.
+  <br>
+  <sup>&delta;</sup> <b>DNase &#8544; incubation mix</b>: Add <b style='color: olive'>10 &mu;L DNase &#8544; stock solution</b> to <b style='color: olive'>70 &mu;L Buffer RDD</b>, mix by inverting the tube, and put on ice.
+</div>
+<blockquote>
+<ul>
+<li><b>DNase Ⅰ stock solution</b>: Located at 4°C (b). Dissolve the lyophilized DNase Ⅰ in 550 μL RNase-free water. To avoid loss of DNase Ⅰ, do not open the vial. Inject RNase-free water into the vial using an RNase-free needle and syringe. Mix gently by inverting the vial. Do not vortex. Store the stock solution as single use aliquots at −20°C (9 months) or 4°C (1 month). Do not refreeze after thawing.</li>
+<li><b>Buffer RDD</b>: Located at 4°C (b). It provides efficient on-column digestion of DNA and also ensures that the RNA remains bound to the column.</li>
+</ul>
+</blockquote>
 <h1 id="procedure">Procedure</h1>
-<p>All instruments must be sterilized prior to the experiment.</p>
+<div style='border-left: 5px solid #cc3300; text-align: justify'>
+  <ul>
+    <li>Ensure that all instruments are properly sterilized before starting the experiment to prevent RNA contamination and eliminate residual RNase activity.</li>
+    <li>Perform all procedures prior to the elution step in a fume hood due to the hazardous nature of <i>&beta;</i>-mercaptoethanol (<i>&beta;</i>-ME).</li>
+  </ul>
+</div>
 <h2 id="step-1-cell-lysis"><strong>Step 1: Cell lysis</strong></h2>
 <ol>
 <li>Dissect ≤ 5 mg tissue ( around 30 root tips ) and dab the surface dry gently (better to use KimWipes paper).</li>
@@ -482,7 +495,7 @@ code {
 <p>Take out the eppendorf and powderize the tissue with the TissueLyser instrument ( this step is extremely important to yield high quantity and quality of RNA, and this step also should be finished as quick as possible ).</p>
 </li>
 <li>
-<p>Add <b style='color: darkorange'>350 µL Buffer RLT mixture</b> into the eppendorf and immediately vortex to homogenize the buffer and the powderized tissue ( 10-15 secs )</p>
+<p>Add <b style='color: darkorange'>350 μL Buffer RLT mixture</b> into the eppendorf and immediately vortex to homogenize the buffer and the powderized tissue ( 10-15 secs )</p>
 </li>
 <li>
 <p>Now we get the <b style='color: darkorange'>raw lysate</b>. Place the eppendorf on ice to inhibit enzymatic activity of the lysate.</p>
@@ -497,21 +510,21 @@ code {
 <p>Carefully take the supernatant to a new eppendorf, and then place on ice.</p>
 </li>
 <li>
-<p>Add <b style='color: darkorange'>350 µL 70% EtOH</b> into the sample, mix well with pipetting. <i><b style='color: red'>DO NOT centrifuge</b></i>. Proceed to the next step immediately.</p>
+<p>Add <b style='color: darkorange'>350 μL 70% EtOH</b> into the sample, mix well with pipetting. <i><b style='color: red'>DO NOT centrifuge</b></i>. Proceed to the next step immediately.</p>
 </li>
 </ol>
 <h2 id="step-3-wash-1"><strong>Step 3: Wash (1)</strong></h2>
 <ol>
 <li>
-<p>Transfer the sample ( including any precipitate that may have formed ) to an <b style='color: darkorange'>RNeasy MinElute® spin column</b> in a <b style='color: orange'>2 mL collection tube</b>. Close the lid and centrifuge ( <b style='color: darkorange'>4°C, 1 min, ≥ 15000 rpm</b> ). <b style='color: skyblue'>Discard the flow-through and reuse the collection tube</b> for the next step.</p>
+<p>Transfer the sample ( including any precipitate that may have formed ) to an <b style='color: darkorange'>RNeasy MinElute® spin column</b> in a <b style='color: orange'>2 mL collection tube</b>. Close the lid and centrifuge ( <b style='color: darkorange'>4°C, 1 min, ≥ 15000 rpm</b> ). <b style='color: purple'>Discard the flow-through and reuse the collection tube</b> for the next step.</p>
 </li>
 <li>
-<p>Add <b style='color: darkorange'>350 µL Buffer RW1</b> to the RNeasy MinElute® spin column. Close the lid and centrifuge ( <b style='color: darkorange'>4°C, 1 min, ≥ 15000 rpm</b> ). <b style='color: skyblue'>Discard the flow-through and reuse the collection tube</b> for the next step.</p>
+<p>Add <b style='color: darkorange'>350 μL Buffer RW1</b> to the RNeasy MinElute® spin column. Close the lid and centrifuge ( <b style='color: darkorange'>4°C, 1 min, ≥ 15000 rpm</b> ). <b style='color: purple'>Discard the flow-through and reuse the collection tube</b> for the next step.</p>
 </li>
 </ol>
 <h2 id="step-4-digest-dna"><strong>Step 4: Digest DNA</strong></h2>
 <ol>
-<li>Add the <b style='color: darkorange'>DNase I incubation mix (80 µL)</b> to the RNeasy MinElute® spin column membrane. Place on benchtop at room temperature for <b style='color: darkorange'>15 mins ~ <u>1 hour</u></b>.</li>
+<li>Add the <b style='color: darkorange'>DNase I incubation mix (80 μL)</b> to the RNeasy MinElute® spin column membrane. Place on benchtop at room temperature for <b style='color: darkorange'>15 mins ~ 1 hour</b>.</li>
 </ol>
 <blockquote>
 <ul>
@@ -520,19 +533,19 @@ code {
 </blockquote>
 <blockquote>
 <ul>
-<li>The <b>DNase I incubation mix (80 µL)</b> should be fresh-prepared. Add 10 µL DNase I stock solution to 70 µL Buffer RDD, mix by inverting the tube, and put on ice. Please refer to the first page for details.</li>
+<li>The <b>DNase I incubation mix (80 μL)</b> should be fresh-prepared. Add 10 µL DNase I stock solution to 70 µL Buffer RDD, mix by inverting the tube, and put on ice. Please refer to the first page for details.</li>
 </ul>
 </blockquote>
 <h2 id="step-5-wash-2"><strong>Step 5: Wash (2)</strong></h2>
 <ol>
 <li>
-<p>Add <b style='color: darkorange'>350 µL Buffer RW1</b> to the RNeasy MinElute® spin column. Close the lid and centrifuge ( <b style='color: darkorange'>4°C, 1 min, ≥ 15000 rpm</b> ). <b style='color: purple'>Discard the flow-through and collection tube</b>.</p>
+<p>Add <b style='color: darkorange'>350 μL Buffer RW1</b> to the RNeasy MinElute® spin column. Close the lid and centrifuge ( <b style='color: darkorange'>4°C, 1 min, ≥ 15000 rpm</b> ). <b style='color: purple'>Discard the flow-through and collection tube</b>.</p>
 </li>
 <li>
-<p>Place the RNeasy MinElute® spin column in a <b style='color: darkorange'>new 2 mL collection tube</b> (supplied). Add <b style='color: darkorange'>500 µL Buffer RPE</b> to the spin column. Close the lid and centrifuge ( <b style='color: darkorange'>4°C, 1 min, ≥ 15000 rpm</b> ). <b style='color: skyblue'>Discard the flow-through and reuse the collection tube</b>.</p>
+<p>Place the RNeasy MinElute® spin column in a <b style='color: darkorange'>new 2 mL collection tube</b> (supplied). Add <b style='color: darkorange'>500 μL Buffer RPE</b> to the spin column. Close the lid and centrifuge ( <b style='color: darkorange'>4°C, 1 min, ≥ 15000 rpm</b> ). <b style='color: purple'>Discard the flow-through and reuse the collection tube</b>.</p>
 </li>
 <li>
-<p>Add <b style='color: darkorange'>500 µL 80% EtOH</b> to the spin column. Close the lid and centrifuge 2 times ( <b style='color: darkorange'>2 × 2 mins, ≥ 15000 rpm</b> ). <b style='color: purple'>Discard the flow-through and collection tube</b>.</p>
+<p>Add <b style='color: darkorange'>500 μL 80% EtOH</b> to the spin column. Close the lid and centrifuge 2 times ( <b style='color: darkorange'>2 × 2 mins, ≥ 15000 rpm</b> ). <b style='color: purple'>Discard the flow-through and collection tube</b>.</p>
 </li>
 </ol>
 <blockquote>
@@ -550,8 +563,20 @@ code {
 </blockquote>
 <h2 id="step-6-elute-rna"><strong>Step 6: Elute RNA</strong></h2>
 <ol>
-<li>Place the RNeasy MinElute® spin column in a <b style='color: orange'>new 1.5 mL RNase-free low-binding collection tube</b> (supplied). Add <b style='color: darkorange'>14 <i>µ</i>L RNase-free water</b> directly to the center of the spin column membrane. Close the lid gently, and centrifuge at full speed ( <b style='color: darkorange'>4°C, 1 ~ <u>15 mins</u>, ≥ 15000 rpm</b> ) to elute the RNA.</li>
+<li>
+<p>Place the RNeasy MinElute® spin column in a <b style='color: orange'>new 1.5 mL RNase-free low-binding collection tube</b> (supplied).</p>
+</li>
+<li>
+<p>Add <b style='color: darkorange'>14 <i>µ</i>L RNase-free water</b> directly to the center of the spin column membrane. Close the lid gently.</p>
+</li>
+<li>
+<p>Centrifuge at full speed ( <b style='color: darkorange'>4°C, 1 ~ <u>15 mins</u>, ≥ 15000 rpm</b> ) to elute the RNA.</p>
+</li>
+<li>
+<p>Store the RNA eluate at <b>−20°C</b> ( few weeks ) or <b>−80°C</b> ( &gt; 1 year ).</p>
+</li>
 </ol>
+<div style='page-break-after: always;'></div>
 <h2 id="step-7-rna-quality--quantity-measurement"><strong>Step 7: RNA quality &amp; quantity measurement</strong></h2>
 <table>
 <thead>
@@ -584,16 +609,6 @@ code {
 </tr>
 </tbody>
 </table>
-<ol>
-<li>
-<p>Measure the RNA quality and quantity.</p>
-</li>
-<li>
-<p>Store the RNA at −80°C.</p>
-</li>
-</ol>
-<br>
-<div style='page-break-after: always;'></div>
 <h1 id="materials-provided-by-the-kit">Materials Provided by the kit</h1>
 <blockquote>
 <p>Buffer RLT (store at 15 - 25°C)<br>
@@ -637,9 +652,9 @@ RNeasy MinElute® spin columns (store at 2 - 8°C)<br>
 <li><i><strong>Note</strong>: Do not label the side of the tubes, that will affect light penetration. Label the lid of each standard tube correctly, as the calibration of the Qubit™ Fluorometer requires the standards to be inserted into the instrument in the right order.</i></li>
 </ul>
 <h2 id="step-1-make-working-solution">Step 1: Make working solution</h2>
-<p>The working solution is a mixture of Component A (dye) and Component B (HS buffer), with a ratio of 1 : 199. For example, to make 10 tubes (8 samples + 2 standards), add 10 µL dye into 1990 µL HS buffer.</p>
+<p>The working solution is a mixture of Component A (dye) and Component B (HS buffer), with a ratio of 1 : 199. For example, to make 10 tubes (8 samples + 2 standards), add 10 μL dye into 1990 μL HS buffer.</p>
 <ol>
-<li>Prepare the <b style='color: orange'>working solution</b> by diluting Component A 1:200 in Component B for each tube ( sample + standard solutions ). For example, 10 µL Component A + 1990 µL Component B for 10 tubes ( 8 samples + 2 standards ).</li>
+<li>Prepare the <b style='color: orange'>working solution</b> by diluting Component A 1:200 in Component B for each tube ( sample + standard solutions ). For example, 10 μL Component A + 1990 μL Component B for 10 tubes ( 8 samples + 2 standards ).</li>
 </ol>
 <ul>
 <li><i><strong>Note</strong>: <b style='color: red'>DO NOT</b> mix the working solution in a glass container. Use clean plastic tube</i></li>
@@ -649,7 +664,7 @@ RNeasy MinElute® spin columns (store at 2 - 8°C)<br>
 <div style='page-break-after: always;'></div>
 <h2 id="step-3-prepare-sample-solutions">Step 3: Prepare sample solutions</h2>
 <ol start="2">
-<li>Add the working solution to each tube such that the final volume is 200 µL.</li>
+<li>Add the working solution to each tube such that the final volume is 200 μL.</li>
 </ol>
 <blockquote>
 <table>
@@ -663,23 +678,23 @@ RNeasy MinElute® spin columns (store at 2 - 8°C)<br>
 <tbody>
 <tr>
 <td style="text-align:center">Volume of working solution</td>
-<td style="text-align:center">190 µL</td>
-<td style="text-align:center">180 – 199 µL</td>
+<td style="text-align:center">190 μL</td>
+<td style="text-align:center">180 – 199 μL</td>
 </tr>
 <tr>
 <td style="text-align:center">Volume of standard</td>
-<td style="text-align:center">10 µL</td>
+<td style="text-align:center">10 μL</td>
 <td style="text-align:center">—</td>
 </tr>
 <tr>
 <td style="text-align:center">Volume of user sample</td>
 <td style="text-align:center">—</td>
-<td style="text-align:center">1 – 20 µL</td>
+<td style="text-align:center">1 – 20 μL</td>
 </tr>
 <tr>
 <td style="text-align:center">Total volume in each assay tube</td>
-<td style="text-align:center">200 µL</td>
-<td style="text-align:center">200 µL</td>
+<td style="text-align:center">200 μL</td>
+<td style="text-align:center">200 μL</td>
 </tr>
 <tr>
 <td style="text-align:center"></td>
@@ -690,8 +705,8 @@ RNeasy MinElute® spin columns (store at 2 - 8°C)<br>
 </table>
 </blockquote>
 <ol start="5">
-<li>Add <b style='color: orange'>10 µL</b> of Component C ( <b style='color: orange'>standard # 1</b> ) and D ( <b style='color: orange'>standard # 2</b> ) separately to the appropriate tubes.</li>
-<li>Add <b style='color: orange'>1 µL</b> of each user <b style='color: orange'>sample</b> to the appropriate tubes.</li>
+<li>Add <b style='color: orange'>10 μL</b> of Component C ( <b style='color: orange'>standard # 1</b> ) and D ( <b style='color: orange'>standard # 2</b> ) separately to the appropriate tubes.</li>
+<li>Add <b style='color: orange'>1 μL</b> of each user <b style='color: orange'>sample</b> to the appropriate tubes.</li>
 <li>Vigorously vortex for 3 ~ 5 seconds.</li>
 <li>Incubate at room temperature for 2 minutes. Then proceed to read standards and samples with the Qubit™ 4 Fluorometer.</li>
 </ol>
@@ -704,7 +719,7 @@ RNeasy MinElute® spin columns (store at 2 - 8°C)<br>
 <li>On the assay screen, select the <strong><code>Sample volume</code></strong> and <strong><code>Unit</code></strong>.</li>
 </ol>
 <ul>
-<li>Touch the + or - buttons on the wheel, or anywhere on the wheel itself, to select the sample volume added to the assay tube ( 1 µL in this protocol ).</li>
+<li>Touch the + or - buttons on the wheel, or anywhere on the wheel itself, to select the sample volume added to the assay tube ( 1 μL in this protocol ).</li>
 <li>From the <strong><code>Unit</code></strong> dropdown menu, select the units for the output sample concentration.</li>
 </ul>
 <ol start="6">
@@ -735,7 +750,7 @@ RNeasy MinElute® spin columns (store at 2 - 8°C)<br>
 <tr>
 <td style="text-align:center">A <sup>☨</sup></td>
 <td style="text-align:left">Qubit™ RNA HS Reagent</td>
-<td style="text-align:center">250 µL</td>
+<td style="text-align:center">250 μL</td>
 <td style="text-align:center">200X in DMSO</td>
 </tr>
 <tr>
@@ -748,13 +763,13 @@ RNeasy MinElute® spin columns (store at 2 - 8°C)<br>
 <td style="text-align:center">C <sup>※</sup></td>
 <td style="text-align:left">Qubit™ RNA HS Standard # 1</td>
 <td style="text-align:center">1 mL</td>
-<td style="text-align:center">0 ng/µL in TE buffer</td>
+<td style="text-align:center">0 ng/μL in TE buffer</td>
 </tr>
 <tr>
 <td style="text-align:center">D <sup>※</sup></td>
 <td style="text-align:left">Qubit™ RNA HS Standard # 2</td>
-<td style="text-align:center">4 × 250 µL</td>
-<td style="text-align:center">10 ng/µL in TE buffer</td>
+<td style="text-align:center">4 × 250 μL</td>
+<td style="text-align:center">10 ng/μL in TE buffer</td>
 </tr>
 <tr>
 <td style="text-align:center"></td>
@@ -774,6 +789,9 @@ RNeasy MinElute® spin columns (store at 2 - 8°C)<br>
 <li>Plastic container ( RNase-free, disposable ) for mixing the Qubit™ working solution;</li>
 <li>Qubit™ Assay Tubes ( 500 tubes, Cat. No. <a href='https://www.thermofisher.com/search/results?query=Q32856'>Q32856</a> );</li>
 </ol>
+<br>
+<p>If you encounter any issues with the protocol, please report them at:<br>
+<a href="https://github.com/P10911004-NPUST/jklai/issues">https://github.com/P10911004-NPUST/jklai/issues</a>.</p>
 
 </body>
 </html>

@@ -227,75 +227,78 @@ pre code {
 </style>
 
 <style>
-pre code.hljs {
-  display: block;
-  overflow-x: auto;
-  padding: 1em
-}
-code.hljs {
-  padding: 3px 5px
-}
-/*
-Monokai style - ported by Luigi Maselli - http://grigio.org
-*/
-.hljs {
-  background: #272822;
-  color: #ddd
-}
-.hljs-tag,
-.hljs-keyword,
-.hljs-selector-tag,
-.hljs-literal,
-.hljs-strong,
-.hljs-number,
-.hljs-name {
-  color: #f92672
-}
-.hljs-code {
-  color: #66d9ef
-}
-.hljs-attribute,
-.hljs-attr,
-.hljs-symbol,
-.hljs-regexp,
-.hljs-link {
-  color: #bf79db
-}
-.hljs-string,
-.hljs-bullet,
-.hljs-subst,
-.hljs-title,
-.hljs-section,
-.hljs-emphasis,
-.hljs-type,
-.hljs-built_in,
-.hljs-selector-attr,
-.hljs-selector-pseudo,
-.hljs-addition,
-.hljs-variable,
-.hljs-template-tag,
-.hljs-template-variable {
-  color: #a6e22e
-}
-.hljs-title.class_,
-.hljs-class .hljs-title {
-  color: white
-}
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
 .hljs-comment,
-.hljs-quote,
-.hljs-deletion,
-.hljs-meta {
-  color: #75715e
+.hljs-quote {
+	color: #8e908c;
 }
-.hljs-keyword,
-.hljs-selector-tag,
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
 .hljs-literal,
-.hljs-doctag,
-.hljs-title,
-.hljs-section,
 .hljs-type,
-.hljs-selector-id {
-  font-weight: bold
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
 }
 </style>
 
@@ -350,7 +353,7 @@ code {
 }
 
 </style>
-<link rel="stylesheet" href="file://C:\\jklai\\github\\rice_heat-stress\\markdown\\markdown-style.css" type="text/css"><link rel="stylesheet" href="file://C:\\jklai\\project\\rice_heat-stress\\markdown\\markdown-style.css" type="text/css">
+
 <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
 </head>
 <body>
@@ -377,6 +380,12 @@ code {
 </tr>
 </thead>
 <tbody>
+<tr>
+<td style="text-align:left"><i>β</i>-mercaptoethanol ( <i>β</i>-ME )</td>
+<td style="text-align:center">−</td>
+<td style="text-align:right">3.5 <i>μ</i>L</td>
+<td style="text-align:center">Toxic (b)</td>
+</tr>
 <tr>
 <td style="text-align:left">Buffer RLT mixture <sup>α</sup></td>
 <td style="text-align:center">−</td>
@@ -421,31 +430,41 @@ code {
 </tr>
 </tbody>
 </table>
-<p><sup>α</sup> <strong>Buffer RLT mixture</strong>: Add 10 <i>μ</i>L <i>β</i>-mercaptoethanol ( <i>β</i>-ME ) to 1 mL Buffer RLT. The mixture can be stored at room temperature for up to 1 month. Buffer RLT contains a high concentration of guanidine isothiocycanate, which supports the binding of RNA to the silica membrane. The <i>β</i>-mercaptoethanol should be added to Buffer RLT to inactivate RNases.</p>
-<p><sup>β</sup> <strong>Buffer RW1</strong> contains a guanidine salt, as well as ethanol, and is used as a stringent washing buffer that efficiently removes biomolecules such as carbohydrates, proteins, fatty acids etc., that are non-specifically bound to the silica membrane. At the same time, RNA molecules larger than 200 bases remain bound to the column.</p>
-<p><sup>γ</sup> <strong>Buffer RPE working solution</strong>: Add 4 volumes of ≥ 96% ethanol to Buffer RPE. In this case, add 2000 μL ethanol to 500 μL Buffer RPE. It is a mild washing buffer for removing traces of salts, which are still on the column due to buffers used earlier in the protocol.</p>
-<p><sup>δ</sup> <strong>DNase Ⅰ incubation mix</strong>: Add <b style='color: olive'>10 μL DNase Ⅰ stock solution</b> to <b style='color: olive'>70 μL Buffer RDD</b>, mix by inverting the tube, and put on ice.</p>
+<div style='font-size: 1em; text-align: justify;'>
+  <sup>&alpha;</sup> <b>Buffer RLT mixture</b>: Add 10 <i>&mu;</i>L <i>&beta;</i>-mercaptoethanol ( <i>&beta;</i>-ME ) to 1 mL Buffer RLT. The mixture can be stored at room temperature for up to 1 month. Buffer RLT contains a high concentration of guanidine isothiocycanate, which supports the binding of RNA to the silica membrane. The <i>&beta;</i>-mercaptoethanol should be added to Buffer RLT to inactivate RNases.
+  <br>
+  <sup>&beta;</sup> <b>Buffer RW1</b> contains a guanidine salt, as well as ethanol, and is used as a stringent washing buffer that efficiently removes biomolecules such as carbohydrates, proteins, fatty acids etc., that are non-specifically bound to the silica membrane. At the same time, RNA molecules larger than 200 bases remain bound to the column.
+  <br>
+  <sup>&gamma;</sup> <b>Buffer RPE working solution</b>: Add 4 volumes of &geq; 96% ethanol to Buffer RPE. In this case, add 2000 &mu;L ethanol to 500 &mu;L Buffer RPE. It is a mild washing buffer for removing traces of salts, which are still on the column due to buffers used earlier in the protocol.
+  <br>
+  <sup>&delta;</sup> <b>DNase &#8544; incubation mix</b>: Add <b style='color: olive'>10 &mu;L DNase &#8544; stock solution</b> to <b style='color: olive'>70 &mu;L Buffer RDD</b>, mix by inverting the tube, and put on ice.
+</div>
 <blockquote>
 <ul>
-<li><strong>DNase Ⅰ stock solution</strong>: Located at 4°C (b). Dissolve the lyophilized DNase Ⅰ in 550 μL RNase-free water. To avoid loss of DNase Ⅰ, do not open the vial. Inject RNase-free water into the vial using an RNase-free needle and syringe. Mix gently by inverting the vial. Do not vortex. Store the stock solution as single use aliquots at −20°C (9 months) or 4°C (1 month). Do not refreeze after thawing.</li>
-<li><strong>Buffer RDD</strong>: Located at 4°C (b). It provides efficient on-column digestion of DNA and also ensures that the RNA remains bound to the column.</li>
+<li><b>DNase Ⅰ stock solution</b>: Located at 4°C (b). Dissolve the lyophilized DNase Ⅰ in 550 μL RNase-free water. To avoid loss of DNase Ⅰ, do not open the vial. Inject RNase-free water into the vial using an RNase-free needle and syringe. Mix gently by inverting the vial. Do not vortex. Store the stock solution as single use aliquots at −20°C (9 months) or 4°C (1 month). Do not refreeze after thawing.</li>
+<li><b>Buffer RDD</b>: Located at 4°C (b). It provides efficient on-column digestion of DNA and also ensures that the RNA remains bound to the column.</li>
 </ul>
 </blockquote>
 <div style='page-break-after: always;'></div>
 <h1 id="procedure">Procedure</h1>
-<p>All instruments must be sterilized prior to the experiment to ensure no RNA contamination and RNase residual.</p>
+<div style='border-left: 5px solid #cc3300; text-align: justify'>
+  <ul>
+    <li>Ensure that all instruments are properly sterilized before starting the experiment to prevent RNA contamination and eliminate residual RNase activity.</li>
+    <li>Perform all procedures prior to the elution step in a fume hood due to the hazardous nature of <i>&beta;</i>-mercaptoethanol (<i>&beta;</i>-ME).</li>
+  </ul>
+</div>
 <h2 id="step-1-cell-lysis"><strong>Step 1: Cell lysis</strong></h2>
 <ol>
 <li>
-<p>Put in 5 beads in each 2 mL microcentrifuge tube. Add <b style='color: darkorange'>450 μL Buffer RLT mixture</b> ( contains 1% <i>β</i>-ME ) into the eppendorf.</p>
+<p>Put in 5 beads in each 2 mL microcentrifuge tube. Prepare <b style='color: darkorange'>450 μL Buffer RLT mixture</b> ( contains 1% <i>β</i>-ME ) into the eppendorf and put in ice to pre-cold the buffer.</p>
 </li>
 <li>
-<p>Dissect ≤ 100 mg tissue and immediately submerge them into the Buffer RLT mixture.</p>
+<p>Flash freeze samples with liquid nitrogen, dissect ≤ 100 mg samples and immediately submerge them into the pre-colded Buffer RLT mixture.</p>
 </li>
 </ol>
 <blockquote>
 <ul>
-<li>The rice root tip weight is approximately: [ 17.7, 20.6, 19.7, 21.2, 22.3 ] mg cm<sup>-1</sup>/ 10 root-tips ≈ <b style='color: darkorange'>0.2 mg / mm</b>. So the maximum is 250 root tips ( cut 2 mm ).</li>
+<li>The rice root tip weight is approximately: [ 17.7, 20.6, 19.7, 21.2, 22.3 ] mg cm<sup>-1</sup>/ 10 root-tips ≈ <b style='color: darkorange'>0.2 mg / mm</b>. So the maximum is 100 root tips ( cut 5 mm ).</li>
 <li>Put the tissue into an eppendorf, slightly centrifuge to spin down the tissue to the bottom of the eppendorf. If the tissue is not used immediately, store the sample at −80°C.</li>
 </ul>
 </blockquote>
@@ -459,7 +478,7 @@ code {
 </blockquote>
 <ol start="4">
 <li>
-<p>(optional) Water bath ( <b style='color: red'>56°C</b>, <b style='color: red'>1 ~ 3 mins</b> ). Help to disrupt the tissue and release RNA.</p>
+<p>(optional) Water bath ( <b style='color: red'>56°C</b>, <b style='color: red'>1 min</b> ). Help to disrupt the tissue and release RNA.</p>
 </li>
 <li>
 <p>Now we get the <b style='color: darkorange'>raw lysate</b>.</p>
@@ -467,7 +486,7 @@ code {
 </ol>
 <h2 id="step-2-collect-the-lysate-supernatant"><strong>Step 2: Collect the lysate supernatant</strong></h2>
 <ol>
-<li>Transfer the <b style='color: darkorange'>raw lysate</b> to a <b style='color: #896790'>QIAshredder spin column</b> ( purple lid ) placed in a <b>2 mL collection tube</b>. Centrifuge ( <b style='color: darkorange'>full speed</b>, <b style='color: darkorange'>2 mins</b> ).</li>
+<li>Transfer the <b style='color: darkorange'>raw lysate</b> ( ≈ 450 μL ) to a <b style='color: #896790'>QIAshredder spin column</b> ( purple lid ) placed in a <b>2 mL collection tube</b>. Centrifuge ( <b style='color: darkorange'>full speed</b>, <b style='color: darkorange'>2 mins</b> ).</li>
 </ol>
 <blockquote>
 <ul>
@@ -502,7 +521,7 @@ code {
 <p>Transfer the sample lysate ( usually 650 μL ), including any precipitate that may have formed, to an <b style='color: violet'>RNeasy spin column</b> ( pink lid ) placed in a 2 mL collection tube (supplied). Close the lid gently.</p>
 </li>
 <li>
-<p>Centrifuge ( ≥ <b style='color: darkorange'>10,000 rpm</b> or 8000 × g, <b style='color: darkorange'>15 secs</b> ). <b style='color: aqua'>Discard the flow-through</b>. Reuse the collection tube.</p>
+<p>Centrifuge ( ≥ <b style='color: darkorange'>10,000 rpm</b> or 8000 × g, <b style='color: darkorange'>15 secs</b> ). <b>Discard the flow-through</b>. Reuse the collection tube.</p>
 </li>
 </ol>
 <blockquote>
@@ -519,7 +538,7 @@ code {
 <p>(optional) Incubate on benchtop ( 25°C, 3–5 mins ) before centrifuging to enhance removal of excess gDNA prior to applying the enzyme.</p>
 </li>
 <li>
-<p>Centrifuge ( ≥ <b style='color: darkorange'>10,000 rpm</b> or 8000 × g, <b style='color: darkorange'>15 secs</b> ) to wash the <b style='color: violet'>RNeasy spin column membrane</b>. <b style='color: aqua'>Discard the flow-through</b>. Reuse the collection tube.</p>
+<p>Centrifuge ( ≥ <b style='color: darkorange'>10,000 rpm</b> or 8000 × g, <b style='color: darkorange'>15 secs</b> ) to wash the <b style='color: violet'>RNeasy spin column membrane</b>. <b>Discard the flow-through</b>. Reuse the collection tube.</p>
 </li>
 <li>
 <p>Add <b style='color: darkorange'>10 μL DNase Ⅰ</b> to <b style='color: darkorange'>70 μL Buffer RDD</b>. Mix well by gently inverting the tube. Centrifuge briefly to collect residual liquid from the sides of the tube.</p>
@@ -541,13 +560,13 @@ code {
 <h2 id="step-5-wash"><strong>Step 5: Wash</strong></h2>
 <ol>
 <li>
-<p>Add <b style='color: darkorange'>350 μL Buffer RW1</b> to the <b style='color: violet'>RNeasy spin column</b>. Close the lid gently. Centrifuge ( ≥ <b style='color: darkorange'>10,000 rpm</b> or 8000 × g, <b style='color: darkorange'>15 secs</b> ) to wash the spin column membrane. <b style='color: aqua'>Discard the flow-through</b>. Reuse the collection tube.</p>
+<p>Add <b style='color: darkorange'>350 μL Buffer RW1</b> to the <b style='color: violet'>RNeasy spin column</b>. Close the lid gently. Centrifuge ( ≥ <b style='color: darkorange'>10,000 rpm</b> or 8000 × g, <b style='color: darkorange'>15 secs</b> ) to wash the spin column membrane. <b>Discard the flow-through</b>. Reuse the collection tube.</p>
 </li>
 <li>
-<p>Add <b style='color: darkorange'>500 μL Buffer RPE</b> to the <b style='color: violet'>RNeasy spin column</b>. Close the lid gently. Centrifuge ( ≥ <b style='color: darkorange'>10,000 rpm</b> or 8000 × g, <b style='color: darkorange'>15 secs</b> ) to wash the spin column membrane. <b style='color: aqua'>Discard the flow-through</b>. Reuse the collection tube.</p>
+<p>Add <b style='color: darkorange'>500 μL Buffer RPE</b> to the <b style='color: violet'>RNeasy spin column</b>. Close the lid gently. Centrifuge ( ≥ <b style='color: darkorange'>10,000 rpm</b> or 8000 × g, <b style='color: darkorange'>15 secs</b> ) to wash the spin column membrane. <b>Discard the flow-through</b>. Reuse the collection tube.</p>
 </li>
 <li>
-<p>Add <b style='color: darkorange'>500 μL Buffer RPE</b> to the <b style='color: violet'>RNeasy spin column</b>. Close the lid gently. Centrifuge ( ≥ <b style='color: darkorange'>10,000 rpm</b> or 8000 × g, <b style='color: darkorange'>2 mins</b> ) to wash the spin column membrane. <b style='color: aquamarine'>Discard the collection tube with the flow-through</b>.</p>
+<p>Add <b style='color: darkorange'>500 μL Buffer RPE</b> to the <b style='color: violet'>RNeasy spin column</b>. Close the lid gently. Centrifuge ( ≥ <b style='color: darkorange'>10,000 rpm</b> or 8000 × g, <b style='color: darkorange'>2 mins</b> ) to wash the spin column membrane. <b>Discard the collection tube with the flow-through</b>.</p>
 </li>
 </ol>
 <blockquote>
@@ -588,9 +607,12 @@ code {
 </ul>
 </blockquote>
 <ol start="4">
-<li>Store the RNA eluate at −20°C ( few weeks ) or −80°C ( &gt; 1 year ).</li>
+<li>Store the RNA eluate at <b>−20°C</b> ( few weeks ) or <b>−80°C</b> ( &gt; 1 year ).</li>
 </ol>
 <p><br><hr><h2 style="text-align: center">Done !!!</h2><hr></p>
-<div style='page-break-after: always;'></div>
+<br>
+<p>If you encounter any issues with the protocol, please report them at:<br>
+<a href="https://github.com/P10911004-NPUST/jklai/issues">https://github.com/P10911004-NPUST/jklai/issues</a>.</p>
+
 </body>
 </html>
