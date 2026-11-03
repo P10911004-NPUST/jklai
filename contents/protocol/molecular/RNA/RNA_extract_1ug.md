@@ -10,12 +10,11 @@ Usage amount per sample:
 | :---                                               | :---:          | ---:            | :---:           |
 | <i>&beta;</i>-mercaptoethanol ( <i>&beta;</i>-ME ) | &minus;        | 3.5 &mu;L       | Toxic (b)       |
 | Buffer RLT mixture <sup>&alpha;</sup>              | &minus;        | 350 &mu;L       | RNA bench       |
-| Buffer RPE mixture <sup>&beta;</sup>               | &minus;        | 500 &mu;L       | RNA bench       |
-| Buffer RW1                                         | &minus;        | 700 &mu;L       | RNA bench       |
+| Buffer RW1 <sup>&beta;</sup>                       | &minus;        | 700 &mu;L       | RNA bench       |
+| Buffer RPE mixture <sup>&gamma;</sup>              | &minus;        | 500 &mu;L       | RNA bench       |
 | Buffer RDD                                         | &minus;        | 70 &mu;L        | 4&deg;C (b)     |
-| DNAse I stock solution <sup>&gamma;</sup>          | &minus;        | 10 &mu;L        | 4&deg;C (b)     |
 | DNAse I incubation mix <sup>&delta;</sup>          | &minus;        | 80 &mu;L        | fresh-prepared  |
-| Ethanol (EtOH)                                     | 100%           | &mdash;         | &#8548;         |
+| Ethanol (EtOH) (for RNA use)                       | &geq; 96%      | &mdash;         | &#8548;         |
 | Ethanol (EtOH)                                     | 80%            | 500 &mu;L       | fresh-prepared  |
 | Ethanol (EtOH)                                     | 70%            | 350 &mu;L       | fresh-prepared  |
 | RNase-free water                                   | &minus;        |  14 &mu;L       | RNA bench       |
@@ -33,6 +32,8 @@ Usage amount per sample:
 
 > - <b>DNase &#8544; stock solution</b>: Located at 4&deg;C (b). Dissolve the lyophilized DNase &#8544; in 550 &mu;L RNase-free water. To avoid loss of DNase &#8544;, do not open the vial. Inject RNase-free water into the vial using an RNase-free needle and syringe. Mix gently by inverting the vial. Do not vortex. Store the stock solution as single use aliquots at &minus;20&deg;C (9 months) or 4&deg;C (1 month). Do not refreeze after thawing.
 > - <b>Buffer RDD</b>: Located at 4&deg;C (b). It provides efficient on-column digestion of DNA and also ensures that the RNA remains bound to the column.
+
+<br>
 
 # Procedure
 
@@ -72,6 +73,8 @@ Usage amount per sample:
 1. Transfer the sample ( including any precipitate that may have formed ) to an <b style='color: darkorange'>RNeasy MinElute&reg; spin column</b> in a <b style='color: orange'>2 mL collection tube</b>. Close the lid and centrifuge ( <b style='color: darkorange'>4&deg;C, 1 min, &geq; 15000 rpm</b> ). <b style='color: purple'>Discard the flow-through and reuse the collection tube</b> for the next step.
 
 2. Add <b style='color: darkorange'>350 &mu;L Buffer RW1</b> to the RNeasy MinElute&reg; spin column. Close the lid and centrifuge ( <b style='color: darkorange'>4&deg;C, 1 min, &geq; 15000 rpm</b> ). <b style='color: purple'>Discard the flow-through and reuse the collection tube</b> for the next step.
+
+<div style='page-break-after: always;'></div>
 
 ## **Step 4: Digest DNA**
 

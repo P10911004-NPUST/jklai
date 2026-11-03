@@ -10,12 +10,12 @@ Usage amount per sample:
 
 | Chemical                                           | Concentration  | Amount            | Location       |
 | :---                                               | :---:          | ---:              | :---:          |
-| <i>&beta;</i>-mercaptoethanol ( <i>&beta;</i>-ME ) | &minus;        | 3.5 <i>&mu;</i>L  | Toxic (b)      |
+| <i>&beta;</i>-mercaptoethanol ( <i>&beta;</i>-ME ) | &minus;        | 4.5 <i>&mu;</i>L  | Toxic (b)      |
 | Buffer RLT mixture <sup>&alpha;</sup>              | &minus;        | 450 <i>&mu;</i>L  | RNA bench      |
 | Buffer RW1 <sup>&beta;</sup>                       | &minus;        | 700 <i>&mu;</i>L  | RNA bench      |
 | Buffer RPE working solution <sup>&gamma;</sup>     | &minus;        | 1000 <i>&mu;</i>L | RNA bench      |
 | DNAse &#8544; incubation mix <sup>&delta;</sup>    | &minus;        | 80 <i>&mu;</i>L   | fresh-prepared |
-| Ethanol (EtOH)                                     | &geq; 96%      | 225 <i>&mu;</i>L  | &#8548;        |
+| Ethanol (EtOH) (for RNA use)                       | &geq; 96%      | 225 <i>&mu;</i>L  | &#8548;        |
 | RNase-free water                                   | &minus;        | 30 <i>&mu;</i>L   | RNA bench      |
 |||||
 
